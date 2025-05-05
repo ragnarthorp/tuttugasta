@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iranian Revolution / Iran-Iraq War & Solidarity</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// REGIONAL UPHEAVAL: THE IRANIAN REVOLUTION & ITS AFTERMATH //</h2>
+        <p>Íranska byltingin árið 1979 og stofnun íslamska lýðveldisins undir stjórn Ayatollah Khomeini hafði gríðarleg áhrif, ekki aðeins í Íran heldur um allan Mið-Austurlandaheim og í samskiptum við Vesturlönd. Gíslatakan í bandaríska sendiráðinu og seinni olíukreppan voru bein afsprengi þessara atburða.</p>
+        <p>Innrás Sovétríkjanna í Afganistan í lok árs 1979 var einnig afdrifarík og átti eftir að verða "Víetnam Sovétríkjanna," þar sem þeir festust í löngu og kostnaðarsömu stríði gegn íslömskum skæruliðum (Mujahideen), sem voru m.a. studdir af Bandaríkjunum.</p>
+
+        <hr>
+
+        <h2>// THE 1980s BEGIN: NEW CONFLICTS & CHALLENGES TO COMMUNISM //</h2>
+        <!-- Mynd af Íran-Írak stríðinu eða Lech Wałęsa -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Lech_Walesa_Gdansk_1980.jpg/260px-Lech_Walesa_Gdansk_1980.jpg" alt="Lech Wałęsa ræðir við verkfallsmenn í Gdansk 1980" class="content-image">
+        <p>Níundi áratugurinn hófst með nýjum stórum átökum þegar Írak, undir stjórn Saddam Hussein, réðst inn í Íran í september 1980. Vonir Íraka um skjótan sigur rættust ekki og Íran-Írak stríðið varð að gríðarlega blóðugu og langvinnu stríði sem stóð í átta ár og kostaði hundruð þúsunda mannslífa.</p>
+        <p>Í Póllandi varð árið 1980 einnig sögulegt þegar óháða verkalýðsfélagið Samstaða (Solidarity), undir forystu Lech Wałęsa, var stofnað í Gdansk skipasmíðastöðinni í kjölfar verkfalla. Samstaða varð að fjöldahreyfingu sem krafðist aukins frelsis og lýðræðis og var fyrsta stóra ögrunin við yfirráð kommúnista í Austur-Evrópu síðan vorið í Prag.</p>
+        <p>Árið endaði svo á hörmulegum nótum fyrir tónlistarheiminn þegar John Lennon, fyrrum meðlimur Bítlanna, var myrtur í New York í desember 1980.</p>
+        <p><strong>Aðgangsspurning:</strong> Hvað hét pólska verkalýðsfélagið sem stofnað var 1980 og ögraði kommúnistastjórninni?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #40 (Ný tækni / Heimsfaraldur):</strong></p>
+             <p class="info-code">01110011</p>
+             <p><em>(Geymdu þetta brot. IBM PC / Geimskutlan / AIDS.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass41">> Nafn verkalýðsfélags:</label>
+             <input type="text" id="pass41" name="pass41" autocapitalize="off">
+             <button id="submit41">Staðfesta</button>
+             <p id="error41" class="error-message" style="display: none;">// ÓÞEKKT VERKALÝÐSHREYFING //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Analyzing Labor Movements & Regional Conflicts...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit41').addEventListener('click', checkAnswer41);
+        document.getElementById('pass41').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer41();
+            }
+        });
+
+        function checkAnswer41() {
+            // Svarið er Solidarity eða Samstaða
+            const correctAnswer1 = 'solidarity';
+            const correctAnswer2 = 'samstaða';
+            const userAnswer = document.getElementById('pass41').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error41');
+
+            if (userAnswer === correctAnswer1 || userAnswer === correctAnswer2) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '42_solidarity_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass41').value = '';
+                document.getElementById('pass41').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

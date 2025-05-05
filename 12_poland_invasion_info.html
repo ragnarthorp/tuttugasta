@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invasion of Poland / Winter War</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// WORLD WAR II BEGINS: THE INVASION OF POLAND //</h2>
+        <!-- Mynd af þýskum hermönnum í Póllandi -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Bundesarchiv_Bild_183-57908%2C_Polen%2C_Panzer_IV.jpg/320px-Bundesarchiv_Bild_183-57908%2C_Polen%2C_Panzer_IV.jpg" alt="Þýskir skriðdrekar í Póllandi 1939" class="content-image">
+        <p>Þann 1. september 1939 réðust Þjóðverjar inn í Pólland með nýrri hernaðaraðferð sem byggði á hraða og samhæfingu skriðdreka og flugvéla. Pólski herinn, þótt hugrakkur væri, átti lítið erindi við þennan yfirburðaafl.</p>
+        <p>Sextán dögum síðar, þann 17. september, réðust Sovétríkin einnig inn í Pólland austan frá, samkvæmt leyniákvæðum Molotov-Ribbentrop sáttmálans. Pólland var því hernumið og skipt á milli Þýskalands og Sovétríkjanna.</p>
+
+        <hr>
+
+        <h2>// EARLY CONFLICTS: KATYN & FINLAND //</h2>
+        <p>Í kjölfar sovésku innrásarinnar voru þúsundir pólskra herforingja og menntamanna teknir til fanga. Árið 1940 voru margir þeirra myrtir af sovésku leyniþjónustunni NKVD í Katyn-skógi og víðar, glæpur sem Sovétríkin neituðu sök á í áratugi.</p>
+        <p>Um veturinn 1939-1940 réðust Sovétríkin einnig á Finnland í því sem kallaðist Vetrarstríðið. Finnar vörðust hetjulega og ollu Rauða hernum miklu manntjóni, þótt þeir neyddust að lokum til að láta af hendi landsvæði.</p>
+        <p><strong>Aðgangsspurning:</strong> Hvaða þýska orði var notað yfir hina hröðu og óvæntu hernaðaraðferð sem Þjóðverjar beittu við innrásina í Pólland?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #11 (Morðár):</strong></p>
+             <p class="info-code">01100001</p>
+             <p><em>(Geymdu þetta brot.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass12">> Hernaðaraðferð:</label>
+             <input type="text" id="pass12" name="pass12" autocapitalize="off">
+             <button id="submit12">Staðfesta</button>
+             <p id="error12" class="error-message" style="display: none;">// ÓÞEKKT HERKÆNSKA //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Evaluating Tactical Data...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit12').addEventListener('click', checkAnswer12);
+        document.getElementById('pass12').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer12();
+            }
+        });
+
+        function checkAnswer12() {
+            // Svarið er Blitzkrieg
+            const correctAnswer = 'blitzkrieg';
+            const userAnswer = document.getElementById('pass12').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error12');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '13_blitzkrieg_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass12').value = '';
+                document.getElementById('pass12').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

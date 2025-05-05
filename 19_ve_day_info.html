@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>End of War in Asia / Atomic Bomb</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// VICTORY IN EUROPE (V-E DAY) & THE PACIFIC WAR CONTINUES //</h2>
+        <p>Þann 8. maí 1945 var sigri fagnað víðsvegar um Evrópu (V-E Day). En þótt stríðinu væri lokið þar, héldu átökin áfram af fullum þunga í Kyrrahafinu þar sem Bandaríkin og bandamenn þeirra börðust gegn Japan.</p>
+        <p>Bandaríkjamenn höfðu beitt "eyjahopps" aðferðinni, þar sem þeir hertóku eyju eftir eyju og færðust nær Japan. Bardagarnir um eyjar eins og Iwo Jima og Okinawa voru gríðarlega mannskæðir og sýndu fram á að japanskir hermenn myndu berjast til síðasta manns.</p>
+
+        <hr>
+
+        <h2>// POTSDAM, THE BOMB & JAPAN'S SURRENDER //</h2>
+        <!-- Mynd af kjarnorkusprengingu -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Atomic_bombing_of_Japan.jpg/320px-Atomic_bombing_of_Japan.jpg" alt="Kjarnorkusveppur yfir japanskri borg" class="content-image">
+        <p>Sumarið 1945 hittust leiðtogar sigurveldanna (Truman, Attlee og Stalín) á Potsdam ráðstefnunni í Þýskalandi til að ræða framtíðina. Þar var Japan gefinn skilyrðislaus uppgjafarkostur, sem þeir höfnuðu.</p>
+        <p>Harry S. Truman Bandaríkjaforseti, sem vissi nú af hinu leynilega Manhattan verkefni og vel heppnaðri tilraunasprengingu á kjarnorkusprengju, tók þá ákvörðun að beita nýja vopninu til að flýta fyrir stríðslokum og forðast gríðarlegt mannfall sem fylgdi innrás á meginland Japans.</p>
+        <p>Þann 6. ágúst 1945 var kjarnorkusprengju varpað á borgina Hiroshima og þremur dögum síðar, 9. ágúst, á Nagasaki. Eyðileggingin var gífurleg og tugþúsundir létust samstundis. Skömmu síðar gafst Japan upp skilyrðislaust þann 15. ágúst (V-J Day) og Seinni heimsstyrjöldinni var formlega lokið.</p>
+        <p><strong>Aðgangsspurning:</strong> Hvaða japanska borg varð fyrir fyrri kjarnorkuárásinni þann 6. ágúst 1945?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #18 (Kjarnorka):</strong></p>
+             <p class="info-code">00101110 00100000 </p>
+             <p><em>(Geymdu þetta brot.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass19">> Fyrri borg:</label>
+             <input type="text" id="pass19" name="pass19" autocapitalize="off">
+             <button id="submit19">Staðfesta</button>
+             <p id="error19" class="error-message" style="display: none;">// ÓÞEKKT SPRENGJUMARKMIÐ //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Analyzing Nuclear Fallout...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit19').addEventListener('click', checkAnswer19);
+        document.getElementById('pass19').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer19();
+            }
+        });
+
+        function checkAnswer19() {
+            // Svarið er Hiroshima
+            const correctAnswer = 'hiroshima';
+            const userAnswer = document.getElementById('pass19').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error19');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '20_post_wwii_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass19').value = '';
+                document.getElementById('pass19').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

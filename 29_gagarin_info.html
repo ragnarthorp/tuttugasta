@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gagarin's Flight / Bay of Pigs & Cuban Missile Crisis</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// INTO THE COSMOS: YURI GAGARIN'S HISTORIC FLIGHT //</h2>
+        <p>Geimferð Yuri Gagarin 12. apríl 1961 var mikið afrek fyrir Sovétríkin og mannkynið. Hún sýndi fram á getu mannsins til að ferðast út fyrir gufuhvolf jarðar og magnaði enn á geimkapphlaupið. Þrátt fyrir að Bandaríkin kæmu skömmu á eftir með Alan Shepard, var Gagarin fyrstur.</p>
+        <p>Bygging Berlínarmúrsins síðar sama ár jók hins vegar á spennuna á jörðu niðri og undirstrikaði hinn harða veruleika Kalda stríðsins.</p>
+
+        <hr>
+
+        <h2>// EDGE OF THE ABYSS: BAY OF PIGS & CUBAN MISSILE CRISIS //</h2>
+        <!-- Mynd af Kennedy eða Kúbudeilunni -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Cuban_crisis_map_missile_range.jpg/320px-Cuban_crisis_map_missile_range.jpg" alt="Kort sem sýnir drægni sovéskra eldflauga frá Kúbu" class="content-image">
+        <p>Samskipti Bandaríkjanna og Kúbu versnuðu enn frekar árið 1961 þegar misheppnuð innrás kúbverskra útlaga, studd af bandarísku leyniþjónustunni CIA, var gerð við Svínaflóa (Bay of Pigs) á Kúbu. Innrásin var algjörlega misheppnuð og styrkti stöðu Castros.</p>
+        <p>Árið 1962 náði spennan milli risaveldanna hæstu hæðum í Kúbudeilunni. Bandaríkin uppgötvuðu að Sovétríkin væru að koma fyrir kjarnorkueldflaugum á Kúbu, sem gætu náð til stórs hluta Bandaríkjanna. Eftir þrettán daga af gríðarlegri spennu, þar sem heimurinn stóð á barmi kjarnorkustyrjaldar, náðist samkomulag þar sem Sovétmenn fjarlægðu eldflaugarnar gegn því að Bandaríkin hétu því að ráðast ekki inn í Kúbu (og fjarlægðu í leyni eigin eldflaugar frá Tyrklandi).</p>
+        <p>Sama ár, 1962, lauk Alsírstríðinu með sjálfstæði Alsír frá Frakklandi.</p>
+        <p><strong>Aðgangsspurning:</strong> Í hvaða landi reyndu Bandaríkin (með kúbverskum útlögum) misheppnaða innrás árið 1961?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #28 (Morð / Réttindi):</strong></p>
+             <p class="info-code">00100000</p>
+             <p><em>(Geymdu þetta brot. Morðið á JFK / Marsinn á Washington.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass29">> Innrásarland:</label>
+             <input type="text" id="pass29" name="pass29" autocapitalize="off">
+             <button id="submit29">Staðfesta</button>
+             <p id="error29" class="error-message" style="display: none;">// ÓGILD INNRÁSARSKÝRSLA //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Nuclear Threat Level Assessment...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit29').addEventListener('click', checkAnswer29);
+        document.getElementById('pass29').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer29();
+            }
+        });
+
+        function checkAnswer29() {
+            // Svarið er Kúba
+            const correctAnswer = 'kuba'; // Eða 'cuba'
+            const userAnswer = document.getElementById('pass29').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error29');
+
+            if (userAnswer === correctAnswer || userAnswer === 'cuba') {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '30_cuba_crisis_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass29').value = '';
+                document.getElementById('pass29').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gorbachev & Live Aid / Disasters of 1986</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// NEW LEADERSHIP IN MOSCOW & GLOBAL SOLIDARITY //</h2>
+        <p>Valdataka Mikhail Gorbachev í Sovétríkjunum árið 1985 markaði upphaf nýrra tíma. Stefna hans um Perestroika (endurskipulagningu) og Glasnost (opnun) miðaði að því að endurlífga sovéskt efnahagslíf og leyfa meiri pólitíska umræðu. Þetta átti eftir að hafa ófyrirséðar afleiðingar fyrir Sovétríkin og Austurblokkina.</p>
+        <p>Live Aid tónleikarnir sama ár sýndu fram á mátt alþjóðlegrar samstöðu og fjölmiðlunar til að vekja athygli á og bregðast við mannúðarkrísum eins og hungursneyðinni í Eþíópíu.</p>
+
+        <hr>
+
+        <h2>// 1986: TECHNOLOGICAL TRAGEDIES //</h2>
+        <!-- Mynd af Challenger sprengingunni eða Chernobyl -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Chernobyl_Disaster.jpg/320px-Chernobyl_Disaster.jpg" alt="Chernobyl kjarnorkuverið eftir slysið" class="content-image">
+        <p>Árið 1986 var skelfilegt ár hvað varðar tæknislys. Í janúar sprakk geimskutlan Challenger skömmu eftir flugtak í beinni útsendingu, með þeim afleiðingum að allir sjö geimfararnir um borð fórust, þar á meðal kennarinn Christa McAuliffe. Slysið var mikið áfall fyrir geimferðaáætlun Bandaríkjanna.</p>
+        <p>Aðeins þremur mánuðum síðar, í apríl, varð versta kjarnorkuslys sögunnar í Chernobyl kjarnorkuverinu í Úkraínu (þá hluti Sovétríkjanna). Sprenging í kjarnaofni og síðan gríðarlegur eldur leysti úr læðingi geislavirk efni sem dreifðust víða um Evrópu. Slysið kostaði fjölda manns lífið (bæði strax og vegna langtímaáhrifa geislunar) og gerði stór svæði óbyggileg.</p>
+        <p>Sama ár var Olof Palme, forsætisráðherra Svíþjóðar, myrtur á götu í Stokkhólmi.</p>
+        <p><strong>Aðgangsspurning:</strong> Í hvaða landi (þáverandi Sovétlýðveldi) var Chernobyl kjarnorkuverið staðsett?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #44 (Umbætur halda áfram):</strong></p>
+             <p class="info-code">01100101</p>
+             <p><em>(Geymdu þetta brot. INF samningurinn.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass45">> Land Chernobyl:</label>
+             <input type="text" id="pass45" name="pass45" autocapitalize="off">
+             <button id="submit45">Staðfesta</button>
+             <p id="error45" class="error-message" style="display: none;">// ÓÞEKKT KJRNORKUSVÆÐI //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Analyzing Disaster Containment & Political Fallout...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit45').addEventListener('click', checkAnswer45);
+        document.getElementById('pass45').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer45();
+            }
+        });
+
+        function checkAnswer45() {
+            // Svarið er Úkraína (Ukraine)
+            const correctAnswer1 = 'ukraina';
+            const correctAnswer2 = 'ukraine';
+            const userAnswer = document.getElementById('pass45').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error45');
+
+            if (userAnswer === correctAnswer1 || userAnswer === correctAnswer2) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '46_chernobyl_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass45').value = '';
+                document.getElementById('pass45').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

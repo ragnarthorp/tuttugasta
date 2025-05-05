@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>End of the USSR / The 1990s: New World Order?</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// THE SOVIET UNION DISSOLVES: THE COLD WAR ENDS //</h2>
+        <p>Formleg upplausn Sovétríkjanna í desember 1991 markaði endanleg endalok Kalda stríðsins, sem hafði mótað heimsmálin í nær hálfa öld. Fall kommúnismans í Austur-Evrópu og Sovétríkjunum sjálfum virtist boða nýtt tímabil friðar og lýðræðis.</p>
+        <p>Fyrsta Persaflóastríðið sama ár sýndi hins vegar að nýjar áskoranir og átök voru framundan, þótt samstaða næðist innan Sameinuðu þjóðanna gegn innrás Íraks.</p>
+
+        <hr>
+
+        <h2>// THE 1990s: CONFLICTS, TECHNOLOGY & HOPE //</h2>
+        <!-- Mynd af Internetinu/WWW eða frá Júgóslavíustríðunum -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/WWW_logo_by_Robert_Cailliau.svg/250px-WWW_logo_by_Robert_Cailliau.svg.png" alt="World Wide Web lógóið" class="content-image" style="filter: invert(1) brightness(1.5); background-color: #0f0; padding: 10px;">
+        <p>Tíundi áratugurinn einkenndist af blöndu átaka og framfara. Upplausn Júgóslavíu leiddi til grimmilegra borgarastyrjalda í Bosníu, Króatíu og síðar Kósóvó, með hörmulegum atburðum eins og þjóðarmorðinu í Srebrenica 1995. Þjóðarmorðið í Rúanda 1994 var annar skelfilegur atburður þar sem hundruð þúsunda manna voru myrtir.</p>
+        <p>Á sama tíma varð gríðarleg sprenging í þróun internetsins og Veraldarvefsins (World Wide Web), sem Tim Berners-Lee hafði þróað. Netið fór úr því að vera rannsóknarverkefni yfir í að verða almenningseign og gjörbreytti samskiptum, upplýsingaöflun og viðskiptum.</p>
+        <p>Vonarglætu var þó einnig að finna. Í Suður-Afríku lauk aðskilnaðarstefnunni formlega og Nelson Mandela varð forseti 1994. Á Norður-Írlandi náðist sögulegt samkomulag milli stríðandi fylkinga með undirritun Föstudagssáttmálans (Good Friday Agreement), sem batt enda á áratuga blóðug átök ("The Troubles").</p>
+        <p><strong>Aðgangsspurning:</strong> Hvaða ár var Föstudagssáttmálinn (Good Friday Agreement) undirritaður á Norður-Írlandi?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #48 (Þúsaldamót):</strong></p>
+             <p class="info-code">00110000 00110000 00101110</p> <!-- Höldum þessu þótt það hafi komið áður, sem lokapunktur -->
+             <p><em>(Geymdu þetta brot. Endir aldarinnar.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass49">> Ár friðarsamnings:</label>
+             <input type="text" id="pass49" name="pass49" inputmode="numeric" pattern="[0-9]*">
+             <button id="submit49">Staðfesta</button>
+             <p id="error49" class="error-message" style="display: none;">// ÓGILD FRIÐARVIÐRÆÐA //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Entering Post-Cold War Era Analysis...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit49').addEventListener('click', checkAnswer49);
+        document.getElementById('pass49').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer49();
+            }
+        });
+
+        function checkAnswer49() {
+            // Svarið er 1998
+            const correctAnswer = '1998';
+            const userAnswer = document.getElementById('pass49').value.trim();
+            const errorMessage = document.getElementById('error49');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á LOKASÍÐUNA
+                window.location.href = '50_final_page.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass49').value = '';
+                document.getElementById('pass49').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

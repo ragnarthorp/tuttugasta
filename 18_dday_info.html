@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>End of War in Europe / Yalta & Surrender</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// THE LIBERATION OF EUROPE & THE YALTA CONFERENCE //</h2>
+        <p>Eftir innrásina í Normandí (Operation Overlord) sumarið 1944 sóttu hersveitir Bandamanna hratt fram í Frakklandi og Belgíu. Um veturinn reyndu Þjóðverjar örvæntingarfulla gagnsókn í Ardennafjöllum (Orrustan um Ardennafjöll) en hún mistókst.</p>
+        <p>Í febrúar 1945 hittust leiðtogarnir þrír, Roosevelt, Churchill og Stalín, aftur á Yalta ráðstefnunni á Krímskaga. Þar ræddu þeir lokastig stríðsins og framtíðarskipulag Evrópu eftir stríð, þar á meðal skiptingu Þýskalands og stofnun Sameinuðu þjóðanna. Ágreiningur milli Vesturveldanna og Sovétríkjanna kom þó þegar í ljós.</p>
+
+        <hr>
+
+        <h2>// COLLAPSE OF THE THIRD REICH: DEATHS & SURRENDER //</h2>
+        <!-- Mynd af sovéskum fána yfir Reichstag -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Reichstag_flag_original.jpg/300px-Reichstag_flag_original.jpg" alt="Sovéski fáninn á þýska þinghúsinu í Berlín 1945" class="content-image">
+        <p>Vorið 1945 var staða Þýskalands vonlaus. Bandamenn sóttu fram úr vestri og Sovétmenn úr austri. Í apríl lést Roosevelt Bandaríkjaforseti og Harry S. Truman tók við. Í lok apríl var Benito Mussolini, fyrrum einræðisherra Ítalíu, tekinn af lífi af ítölskum andspyrnumönnum.</p>
+        <p>Þann 30. apríl 1945, þegar Rauði herinn barðist í götum Berlínar, framdi Adolf Hitler sjálfsmorð í neðanjarðarbyrgi sínu. Nokkrum dögum síðar, þann 8. maí 1945 (V-E Day - Victory in Europe Day), gáfust þýskar hersveitir skilyrðislaust upp fyrir Bandamönnum. Stríðinu í Evrópu var lokið.</p>
+        <p><strong>Aðgangsspurning:</strong> Hvaða skammstöfun er notuð yfir daginn þegar Þýskaland gafst upp og stríðinu lauk í Evrópu (enska)?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #17 (Stofnun SÞ):</strong></p>
+             <p class="info-code">00110001</p> <!-- Sameinuðu Þjóðirnar -->
+             <p><em>(Geymdu þetta brot.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass18">> Sigurdagur (Evr.):</label>
+             <input type="text" id="pass18" name="pass18" autocapitalize="off">
+             <button id="submit18">Staðfesta</button>
+             <p id="error18" class="error-message" style="display: none;">// ÓGILD STRÍÐSLOKAYFIRLÝSING //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Analyzing Post-War Protocols...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit18').addEventListener('click', checkAnswer18);
+        document.getElementById('pass18').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer18();
+            }
+        });
+
+        function checkAnswer18() {
+            // Svarið er V-E Day eða VE Day
+            const correctAnswer1 = 'v-e day';
+            const correctAnswer2 = 've day';
+            const userAnswer = document.getElementById('pass18').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error18');
+
+            if (userAnswer === correctAnswer1 || userAnswer === correctAnswer2) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '19_ve_day_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass18').value = '';
+                document.getElementById('pass18').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

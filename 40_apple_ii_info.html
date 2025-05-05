@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple II & Star Wars / Camp David & Iranian Revolution</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// THE RISE OF PERSONAL COMPUTING & POP CULTURE //</h2>
+        <p>Útgáfa Apple II tölvunnar árið 1977 ásamt öðrum snemmbúnum einkatölvum markaði upphaf þess að tölvur urðu aðgengilegar fyrir almenning og smáfyrirtæki. Þetta lagði grunninn að þeirri tölvubyltingu sem átti eftir að eiga sér stað.</p>
+        <p>Sama ár gjörbreytti Star Wars kvikmyndalandslaginu og varð að einu stærsta fyrirbæri poppmenningar. Voyager geimförin tvö hófu sögulegt ferðalag sitt út í geiminn og senda enn þann dag í dag gögn til jarðar.</p>
+
+        <hr>
+
+        <h2>// PEACE ACCORDS, REVOLUTION & A NEW COLD WAR FRONT //</h2>
+        <!-- Mynd af Camp David eða Írönsku byltingunni -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Begin%2C_Carter%2C_Sadat_at_Camp_David_1978.jpg/320px-Begin%2C_Carter%2C_Sadat_at_Camp_David_1978.jpg" alt="Begin, Carter og Sadat á Camp David 1978" class="content-image">
+        <p>Árið 1978 náðist sögulegt samkomulag þegar Anwar Sadat, forseti Egyptalands, og Menachem Begin, forsætisráðherra Ísraels, undirrituðu Camp David samkomulagið undir milligöngu Jimmy Carter Bandaríkjaforseta. Þetta leiddi til formlegs friðarsamnings milli landanna árið eftir, sem var mikill áfangi en olli einnig mikilli reiði í mörgum Arabaríkjum.</p>
+        <p>Árið 1979 varð önnur bylting sem skók Mið-Austurlönd þegar Íranska byltingin steypti af stóli Shah Reza Pahlavi, sem var hallur undir Vesturlönd. Ayatollah Khomeini tók við völdum og stofnaði íslamskt lýðveldi, sem markaði upphaf stirðra samskipta Írans við Bandaríkin, sérstaklega eftir að íranskir stúdentar tóku bandaríska sendiráðið í Teheran og héldu starfsmönnum þess í gíslingu (Íranska gíslatakan).</p>
+        <p>Sama ár varð Margaret Thatcher fyrsta konan til að verða forsætisráðherra Bretlands. Árið 1979 skall einnig á önnur olíukreppa, að hluta til vegna byltingarinnar í Íran. Árið endaði svo á því að Sovétríkin réðust inn í Afganistan í desember til að styðja kommúnistastjórn þar, sem hóf hið langvinna og kostnaðarsama Sovét-Afganistan stríð.</p>
+        <p><strong>Aðgangsspurning:</strong> Í hvaða landi varð bylting árið 1979 sem steypti Shah af stóli?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #39 (Nýr áratugur / Stríð):</strong></p>
+             <p class="info-code">01100101</p>
+             <p><em>(Geymdu þetta brot. Íran-Írak stríðið / Solidarity.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass40">> Byltingarland:</label>
+             <input type="text" id="pass40" name="pass40" autocapitalize="off">
+             <button id="submit40">Staðfesta</button>
+             <p id="error40" class="error-message" style="display: none;">// ÓÞEKKT PÓLITÍSK UMBROT //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Analyzing Middle East Geopolitics & Energy Security...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit40').addEventListener('click', checkAnswer40);
+        document.getElementById('pass40').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer40();
+            }
+        });
+
+        function checkAnswer40() {
+            // Svarið er Íran
+            const correctAnswer = 'iran';
+            const userAnswer = document.getElementById('pass40').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error40');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '41_iran_revolution_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass40').value = '';
+                document.getElementById('pass40').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Six-Day War / 1968: A Year of Turmoil</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// ISRAEL'S SWIFT VICTORY: THE SIX-DAY WAR //</h2>
+        <p>Sex daga stríðið árið 1967 gjörbreytti landakortinu í Mið-Austurlöndum. Hernám Ísraels á Sínaí, Gasasvæðinu, Vesturbakkanum og Gólanhæðum skapaði nýja og flókna stöðu sem hefur varað síðan og verið kjarninn í flóknum deilum. </p>
+        <p>"Summer of Love" sama ár endurspeglaði vaxandi gjá milli kynslóða og breytt viðhorf til samfélagsgilda, stríðs og hefðbundinna lífshátta í vestrænum heimi.</p>
+
+        <hr>
+
+        <h2>// 1968: A YEAR OF GLOBAL UPHEAVAL //</h2>
+        <!-- Mynd af skriðdrekum í Prag eða mótmælum 1968 -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Bundesarchiv_B_145_Bild-F027932-0032%2C_Prag%2C_Einmarsch_von_Warschauer_Pakt_Truppen.jpg/320px-Bundesarchiv_B_145_Bild-F027932-0032%2C_Prag%2C_Einmarsch_von_Warschauer_Pakt_Truppen.jpg" alt="Skriðdrekar Varsjárbandalagsins í Prag 1968" class="content-image">
+        <p>Árið 1968 einkenndist af mótmælum, uppreisnum og átökum víða um heim. Í Tékkóslóvakíu hófst "Vorið í Prag", tilraun til að skapa "mannlegan sósíalisma" með auknu frelsi, en það var kæft með innrás hersveita Varsjárbandalagsins í ágúst.</p>
+        <p>Í Víetnam hófst Tet-sóknin í janúar, stórfelld árás Víet Kong og Norður-Víetnamshers sem, þrátt fyrir að vera hernaðarlega misheppnuð fyrir kommúnista, olli miklu áfalli í Bandaríkjunum og jók andstöðu við stríðið.</p>
+        <p>Í Bandaríkjunum var árið sérstaklega hörmulegt. Dr. Martin Luther King Jr., leiðtogi borgararéttindahreyfingarinnar, var myrtur í apríl. Aðeins tveimur mánuðum síðar, í júní, var Robert F. Kennedy, forsetaframbjóðandi Demókrata og bróðir Johns F. Kennedy, einnig myrtur.</p>
+        <p><strong>Aðgangsspurning:</strong> Í hvaða borg átti "Vorið" sér stað, tilraun til umbóta sem var kveðin niður af Varsjárbandalaginu?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #33 (Tunglið / Netið):</strong></p>
+             <p class="info-code">01110101 01101011</p>
+             <p><em>(Geymdu þetta brot. Tungllending / ARPANET.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass34">> Höfuðborg "Vorsins":</label>
+             <input type="text" id="pass34" name="pass34" autocapitalize="off">
+             <button id="submit34">Staðfesta</button>
+             <p id="error34" class="error-message" style="display: none;">// ÓÞEKKT UMBÓTASVÆÐI //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Analyzing Global Protest Patterns...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit34').addEventListener('click', checkAnswer34);
+        document.getElementById('pass34').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer34();
+            }
+        });
+
+        function checkAnswer34() {
+            // Svarið er Prag
+            const correctAnswer = 'prag'; // Eða Prague
+            const userAnswer = document.getElementById('pass34').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error34');
+
+            if (userAnswer === correctAnswer || userAnswer === 'prague') {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '35_prague_spring_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass34').value = '';
+                document.getElementById('pass34').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

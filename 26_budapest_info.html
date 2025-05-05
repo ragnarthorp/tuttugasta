@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hungary Crushed / Space Race Begins</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// AFTERMATH IN HUNGARY & THE COLD WAR LANDSCAPE //</h2>
+        <p>Misheppnuð uppreisn í Búdapest árið 1956 og harka Sovétmanna við að berja hana niður sendi skýr skilaboð til heimsins um yfirráð Sovétríkjanna í Austur-Evrópu. Vesturveldin hörmuðu atburðina en gripu ekki hernaðarlega inn í, sem staðfesti óbeint skiptingu áhrifasvæða í Evrópu.</p>
+        <p>Súesdeilan hafði einnig sýnt fram á minnkandi áhrif gömlu nýlenduveldanna Bretlands og Frakklands og vaxandi vald Bandaríkjanna og Sovétríkjanna.</p>
+
+        <hr>
+
+        <h2>// INTO ORBIT: SPUTNIK & THE DAWN OF THE SPACE AGE //</h2>
+        <!-- Mynd af Sputnik gervihnettinum -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Sputnik_asm.jpg/240px-Sputnik_asm.jpg" alt="Líkan af Sputnik 1 gervihnettinum" class="content-image">
+        <p>Árið 1957 kom Sovétmönnum heiminum aftur á óvart þegar þeir skutu fyrsta gervihnettinum, Sputnik 1, á braut um jörðu þann 4. október. Þetta litla "pípandi" hnöttur markaði upphaf geimkapphlaupsins milli risaveldanna og olli miklu uppnámi í Bandaríkjunum ("Sputnik crisis"), þar sem menn óttuðust að Sovétríkin hefðu náð tæknilegu forskoti.</p>
+        <p>Sama ár var Rómarsáttmálinn undirritaður, sem stofnaði Efnahagsbandalag Evrópu (EEC), fyrirrennara Evrópusambandsins (ESB). Einnig fékk Gana sjálfstæði frá Bretlandi, fyrsta landið í Afríku sunnan Sahara til að öðlast sjálfstæði frá nýlenduveldi.</p>
+        <p><strong>Aðgangsspurning:</strong> Hvað hét fyrsti gervihnötturinn sem Sovétríkin skutu á braut um jörðu árið 1957?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #25 (Bylting / Geimur):</strong></p>
+             <p class="info-code">00100000 00110001</p>
+             <p><em>(Geymdu þetta brot. Kúba / Fyrstu myndir af bakhlið tunglsins.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass26">> Nafn gervihnattar:</label>
+             <input type="text" id="pass26" name="pass26" autocapitalize="off">
+             <button id="submit26">Staðfesta</button>
+             <p id="error26" class="error-message" style="display: none;">// ÓÞEKKTUR HLUTUR Á BRAUT //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Tracking Orbital Trajectories...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit26').addEventListener('click', checkAnswer26);
+        document.getElementById('pass26').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer26();
+            }
+        });
+
+        function checkAnswer26() {
+            // Svarið er Sputnik
+            const correctAnswer = 'sputnik';
+            const userAnswer = document.getElementById('pass26').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error26');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '27_sputnik_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass26').value = '';
+                document.getElementById('pass26').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

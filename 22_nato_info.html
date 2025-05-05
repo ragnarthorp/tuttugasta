@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NATO / Korean War Begins</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// NEW ALLIANCES & THE NUCLEAR AGE //</h2>
+        <p>Stofnun Atlantshafsbandalagsins (NATO) árið 1949 var skýrt merki um harðnandi Kalda stríð. Bandalagið, sem byggði á gagnkvæmum varnarskuldbindingum, átti að fæla Sovétríkin frá árás á Vestur-Evrópu. Stofnun Alþýðulýðveldisins Kína sama ár og fyrsta kjarnorkutilraun Sovétríkjanna juku enn á spennuna milli risaveldanna.</p>
+        <p>Heimurinn var nú skiptur í tvær andstæðar fylkingar og óttinn við allsherjar kjarnorkustyrjöld var orðinn raunverulegur.</p>
+
+        <hr>
+
+        <h2>// THE COLD WAR TURNS HOT: THE KOREAN WAR //</h2>
+        <!-- Mynd af hermönnum í Kóreustríðinu -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Korean_War_montage_v2.png/320px-Korean_War_montage_v2.png" alt="Myndasamsetning úr Kóreustríðinu" class="content-image">
+        <p>Eftir Seinni heimsstyrjöldina hafði Kóreuskaganum verið skipt tímabundið í hernámssvæði Sovétríkjanna í norðri og Bandaríkjanna í suðri, með skilin við 38. breiddargráðu. Tveimur ríkjum var komið á fót: kommúnísku Norður-Kóreu og lýðræðissinnuðu Suður-Kóreu.</p>
+        <p>Þann 25. júní 1950 réðust hersveitir Norður-Kóreu, með stuðningi Sovétríkjanna og Kína, yfir 38. breiddargráðuna og inn í Suður-Kóreu, með það að markmiði að sameina skagann undir kommúnistastjórn. Sameinuðu þjóðirnar (aðallega Bandaríkin) brugðust við og sendu herlið til að verja Suður-Kóreu. Kóreustríðið var hafið.</p>
+        <p><strong>Aðgangsspurning:</strong> Við hvaða breiddargráðu lágu skilin milli Norður- og Suður-Kóreu fyrir innrásina 1950?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #21 (Dauði Stalíns):</strong></p>
+             <p class="info-code">01101110</p>
+             <p><em>(Geymdu þetta brot. Vopnahlé Kóreu / DNA.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass22">> Breiddargráða:</label>
+             <input type="text" id="pass22" name="pass22" inputmode="numeric" pattern="[0-9]*">
+             <button id="submit22">Staðfesta</button>
+             <p id="error22" class="error-message" style="display: none;">// ÓGILD LANDAMÆRALÍNA //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Analyzing Peninsular Conflict Zone...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit22').addEventListener('click', checkAnswer22);
+        document.getElementById('pass22').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer22();
+            }
+        });
+
+        function checkAnswer22() {
+            // Svarið er 38
+            const correctAnswer = '38';
+            const userAnswer = document.getElementById('pass22').value.trim();
+            const errorMessage = document.getElementById('error22');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '23_korean_war_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass22').value = '';
+                document.getElementById('pass22').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

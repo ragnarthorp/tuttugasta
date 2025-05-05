@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moon Landing / Early 70s: Beatles End, China Opens</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// ONE GIANT LEAP: THE APOLLO PROGRAM & DAWN OF THE INTERNET //</h2>
+        <p>Tungllending Apollo 11 árið 1969 var hápunktur geimkapphlaupsins og gríðarlegur sigur fyrir Bandaríkin. Apollo áætlunin hélt áfram með fleiri tunglferðum fram til 1972. Stofnun ARPANET sama ár lagði grunninn að tæknibyltingu sem átti eftir að umbreyta samskiptum og upplýsingamiðlun áratugum síðar.</p>
+        <p>Þessi tækniafrek stóðu þó í skarpri andstöðu við áframhaldandi átök og ólgu víða um heim, sérstaklega Víetnamstríðið.</p>
+
+        <hr>
+
+        <h2>// EARLY 1970s: SHIFTS IN MUSIC, POLITICS & TECHNOLOGY //</h2>
+        <!-- Mynd af Nixon í Kína eða Pong leiknum -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Nixon_Great_Wall_1972.png/320px-Nixon_Great_Wall_1972.png" alt="Richard Nixon á Kínamúrnum 1972" class="content-image">
+        <p>Áttundi áratugurinn hófst með miklum breytingum. Árið 1970 leystist ein vinsælasta hljómsveit allra tíma, Bítlarnir (The Beatles), formlega upp. Á pólitíska sviðinu átti sér stað sögulegur viðburður árið 1972 þegar Richard Nixon Bandaríkjaforseti heimsótti Alþýðulýðveldið Kína og hitti Mao Zedong. Þessi heimsókn markaði upphaf nýrra samskipta milli ríkjanna eftir áratuga fjandskap.</p>
+        <p>Hins vegar varpaði annað atvik árið 1972 skugga á stjórnmálin í Bandaríkjunum. Í júní var brotist inn í höfuðstöðvar Demókrataflokksins í Watergate byggingunni í Washington D.C. Þetta innbrot átti eftir að þróast í Watergate hneykslið sem að lokum neyddi Nixon til að segja af sér.</p>
+        <p>Á tæknisviðinu kom fyrsti tölvuleikurinn sem náði gríðarlegum almennum vinsældum fram á sjónarsviðið árið 1972. Einfaldur tennisleikur sem ruddi brautina fyrir tölvuleikjaiðnaðinn.</p>
+        <p><strong>Aðgangsspurning:</strong> Hvað hét þessi byltingarkenndi og einfaldi tölvutennisleikur frá 1972?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #35 (Stríðslok / Hneyksli):</strong></p>
+             <p class="info-code">00110011</p>
+             <p><em>(Geymdu þetta brot. Nixon segir af sér / Terracotta herinn finnst.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass36">> Nafn tölvuleiks:</label>
+             <input type="text" id="pass36" name="pass36" autocapitalize="off">
+             <button id="submit36">Staðfesta</button>
+             <p id="error36" class="error-message" style="display: none;">// ÓÞEKKTUR LEIKJAKÓÐI //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Processing Diplomatic & Technological Developments...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit36').addEventListener('click', checkAnswer36);
+        document.getElementById('pass36').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer36();
+            }
+        });
+
+        function checkAnswer36() {
+            // Svarið er Pong
+            const correctAnswer = 'pong';
+            const userAnswer = document.getElementById('pass36').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error36');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '37_pong_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass36').value = '';
+                document.getElementById('pass36').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

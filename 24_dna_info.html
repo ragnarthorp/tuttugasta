@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNA Discovery / End of Wars & New Conflicts</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// SCIENTIFIC LEAP: UNRAVELING THE CODE OF LIFE //</h2>
+        <p>Uppgötvunin á tvöfaldri helix byggingu DNA (Deoxyribonucleic acid) árið 1953 var byltingarkennd. Hún veitti skilning á því hvernig erfðaupplýsingar eru geymdar og afritaðar, sem lagði grunninn að nútíma erfðafræði, líftækni og mörgum framförum í læknavísindum.</p>
+        <p>Á sama tíma og þessi vísindalegu tímamót áttu sér stað, voru átökin á Kóreuskaganum enn í gangi, þótt dauði Stalíns hefði mögulega greitt fyrir vopnahlésviðræðum.</p>
+
+        <hr>
+
+        <h2>// ARMISTICE IN KOREA / WARS IN INDOCHINA & ALGERIA //</h2>
+        <!-- Mynd frá Dien Bien Phu eða Alsírstríðinu -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/French_paratroopers_at_Dien_Bien_Phu.jpg/320px-French_paratroopers_at_Dien_Bien_Phu.jpg" alt="Franskir fallhlífahermenn við Dien Bien Phu" class="content-image">
+        <p>Í júlí 1953 var loks samið um vopnahlé í Kóreustríðinu. Stríðinu lauk án formlegs friðarsamnings og skipting Kóreuskagans við 38. breiddargráðuna var fest í sessi, ástand sem varir enn þann dag í dag.</p>
+        <p>Annars staðar héldu nýlendustríð áfram. Árið 1954 biðu Frakkar afgerandi ósigur fyrir Víetnamískum sjálfstæðissinnum undir forystu Ho Chi Minh í orrustunni við Dien Bien Phu. Þetta leiddi til loka Fyrsta Indókínastríðsins og skiptingar Víetnam í norður- og suðurhluta, sem síðar varð kveikjan að Víetnamstríðinu.</p>
+        <p>Sama ár, 1954, hófst blóðugt sjálfstæðisstríð í Alsír gegn frönskum yfirráðum, sem átti eftir að standa í átta ár.</p>
+        <p><strong>Aðgangsspurning:</strong> Við hvaða stað í Víetnam biðu Frakkar afgerandi ósigur árið 1954?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #23 (Pacts & Crises):</strong></p>
+             <p class="info-code">10111010 01100001</p>
+             <p><em>(Geymdu þetta brot. Varsjárbandalagið / Súes / Ungverjaland.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass24">> Orrustustaður (Víetnam):</label>
+             <input type="text" id="pass24" name="pass24" autocapitalize="off">
+             <button id="submit24">Staðfesta</button>
+             <p id="error24" class="error-message" style="display: none;">// ÓÞEKKTUR VÍGVÖLLUR //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Decolonization Processes Initiated...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit24').addEventListener('click', checkAnswer24);
+        document.getElementById('pass24').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer24();
+            }
+        });
+
+        function checkAnswer24() {
+            // Svarið er Dien Bien Phu
+            const correctAnswer = 'dien bien phu';
+            const userAnswer = document.getElementById('pass24').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error24');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '25_dienbienphu_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass24').value = '';
+                document.getElementById('pass24').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

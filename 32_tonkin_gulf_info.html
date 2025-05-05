@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vietnam Escalates / Cultural Revolution</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// THE GULF OF TONKIN INCIDENT & VIETNAM WAR ESCALATION //</h2>
+        <p>Tonkinflóa atvikið árið 1964 og ályktunin sem fylgdi í kjölfarið urðu vendipunktur í Víetnamstríðinu. Það veitti Lyndon B. Johnson forseta heimild til að senda hundruð þúsunda bandarískra hermanna til Suður-Víetnam og hefja umfangsmiklar loftárásir á Norður-Víetnam.</p>
+        <p>Stríðið stigmagnaðist hratt árið 1965 og mannfall jókst. Á sama tíma hélt baráttan fyrir borgararéttindum áfram í Bandaríkjunum, en hún varð fyrir áfalli þegar Malcolm X, áhrifamikill leiðtogi svartra, var myrtur í febrúar 1965.</p>
+
+        <hr>
+
+        <h2>// UPHEAVAL IN ASIA: CULTURAL REVOLUTION & SINGAPORE'S INDEPENDENCE //</h2>
+        <!-- Mynd tengd Menningarbyltingunni eða Singapúr -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Cultural_Revolution_poster.jpg/250px-Cultural_Revolution_poster.jpg" alt="Áróðursplakat frá Menningarbyltingunni í Kína" class="content-image">
+        <p>Árið 1966 hóf Mao Zedong hina svokölluðu Menningarbyltingu í Kína. Markmiðið var að "hreinsa" Kommúnistaflokkinn og kínverskt samfélag af "borgaralegum" og "gagnbyltingarsinnuðum" áhrifum. Byltingin leiddi til mikillar ringulreiðar, ofsókna, ofbeldis og eyðileggingar á menningarverðmætum og stóð í um áratug.</p>
+        <p>Árið áður, 1965, hafði Singapúr orðið sjálfstætt ríki eftir að hafa verið rekið úr sambandsríki Malasíu. Undir forystu Lee Kuan Yew umbreyttist Singapúr úr fátækri hafnarborg í eitt mesta efnahagsveldi Asíu á fáum áratugum.</p>
+        <p><strong>Aðgangsspurning:</strong> Í hvaða landi hófst Menningarbyltingin árið 1966?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #31 (Sex dagar / Sumar):</strong></p>
+             <p class="info-code">01101100</p>
+             <p><em>(Geymdu þetta brot. Sex daga stríðið / Summer of Love.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass32">> Land Menningarbyltingar:</label>
+             <input type="text" id="pass32" name="pass32" autocapitalize="off">
+             <button id="submit32">Staðfesta</button>
+             <p id="error32" class="error-message" style="display: none;">// ÓÞEKKT PÓLITÍSK HREINSUN //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Analyzing Cultural & Political Shifts...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit32').addEventListener('click', checkAnswer32);
+        document.getElementById('pass32').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer32();
+            }
+        });
+
+        function checkAnswer32() {
+            // Svarið er Kína (China)
+            const correctAnswer1 = 'kina';
+            const correctAnswer2 = 'china';
+            const userAnswer = document.getElementById('pass32').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error32');
+
+            if (userAnswer === correctAnswer1 || userAnswer === correctAnswer2) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '33_cultural_revolution_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass32').value = '';
+                document.getElementById('pass32').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

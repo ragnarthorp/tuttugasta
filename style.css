@@ -1,0 +1,211 @@
+/* --- Íflutningur á leturgerð (VT323) --- */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+/* --- Almennir hakkarastílar --- */
+body {
+    background-color: #000; /* Svartur bakgrunnur */
+    color: #00dd00; /* Aðeins daufari grænn fyrir grunntexta */
+    /* Nota nýju leturgerðina, með fallback */
+    font-family: 'VT323', 'Courier New', monospace;
+    font-size: 18px; /* Leturgerðin er frekar lítil, stækkum grunnstærð */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.5; /* Aðeins minna bil á milli lína */
+    /* Látlaus scanline effekt (valfrjálst) */
+    background-image: linear-gradient(
+        rgba(0, 255, 0, 0.05) 1px,
+        transparent 1px
+    );
+    background-size: 1px 3px; /* Þunnar línur með bili */
+}
+
+/* --- Stílar fyrir aðalefniskassa --- */
+.content-box {
+    width: 90%;
+    max-width: 750px; /* aðeins breiðari */
+    margin: auto;
+    padding: 25px 35px; /* aðeins meira padding */
+    /* Harðari rammi */
+    border: 2px solid #00ff00; /* Skærari grænn rammi */
+    background-color: rgba(0, 15, 0, 0.7); /* Örlítið dekkri/minna gagnsær */
+    /* Uppfærður skuggi fyrir meiri glóa */
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.4), inset 0 0 10px rgba(0, 255, 0, 0.2);
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Stílar fyrir fyrirsagnir og texta innan boxins */
+.content-box h1, .content-box h2 {
+    color: #00ff00; /* Skær grænn */
+    border-bottom: 1px solid #008800; /* Dökkari græn lína */
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    /* Lúmskur textaskuggi */
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.7);
+    letter-spacing: 1px; /* Smá auka bil */
+    text-transform: uppercase; /* Stórir stafir fyrir fyrirsagnir? */
+}
+
+.content-box p {
+    margin-bottom: 18px;
+    text-align: left;
+    font-size: 1.1em; /* Örlítið stærri p texti */
+}
+
+.content-box hr {
+    border: 0;
+    height: 1px;
+    background-color: #00ff00; /* Skær græn lína */
+    margin: 35px 0;
+    box-shadow: 0 0 8px rgba(0, 255, 0, 0.6);
+}
+
+/* --- Stílar fyrir inntak og takka --- */
+.input-area {
+    margin-top: 25px;
+    text-align: center;
+}
+
+/* Blikkandi cursor effekt við hliðina á label */
+.input-area label::after {
+    content: '_';
+    display: inline-block;
+    vertical-align: bottom;
+    animation: blink 1s infinite;
+    margin-left: 3px;
+    color: #00ff00; /* Skær grænn cursor */
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.input-area label {
+    margin-right: 8px;
+    color: #00ff00; /* Skærari label texti */
+    font-size: 1.1em;
+}
+
+.input-area input[type="text"],
+.input-area input[type="password"] {
+    background-color: #050505; /* Mjög dökkur bakgrunnur */
+    color: #00ff00; /* Skær grænn texti */
+    border: 1px solid #008800; /* Dökkari grænn rammi */
+    padding: 10px 15px;
+    font-family: inherit;
+    font-size: 1em;
+    margin: 5px;
+    border-radius: 0;
+    outline: none; /* Fjarlægja default focus outline */
+}
+.input-area input[type="text"]:focus,
+.input-area input[type="password"]:focus {
+    border-color: #00ff00; /* Skærari rammi við focus */
+    box-shadow: 0 0 8px rgba(0, 255, 0, 0.5);
+}
+
+
+/* Stílar fyrir takka og linka sem líta út eins og takkar */
+.button,
+.input-area button {
+    background-color: transparent;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    padding: 10px 25px; /* Aðeins meira padding */
+    font-family: inherit;
+    font-size: 1.1em;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.6);
+    border-radius: 0;
+    letter-spacing: 1px;
+}
+
+.button:hover,
+.input-area button:hover {
+    background-color: #00ff00;
+    color: #000;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
+    text-shadow: none;
+}
+
+/* Stíll fyrir hnitin á fyrstu síðu */
+.coordinates {
+    font-size: 1.4em; /* Stærri hnit */
+    letter-spacing: 4px;
+    margin: 35px 0;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+    text-align: center;
+    color: #00ff00; /* Skær grænn */
+}
+
+/* Stílar fyrir villuskilaboð */
+.error-message {
+    color: #ff6347; /* Líflegri rauður */
+    font-weight: normal; /* VT323 er bold sjálfgefið */
+    margin-top: 15px;
+    text-align: center;
+    display: block;
+    font-size: 1.1em;
+    text-shadow: 0 0 5px rgba(255, 99, 71, 0.7);
+}
+
+/* Stílar fyrir upplýsingaboxið */
+.info-box {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px dashed #00ff00; /* Skærara dashed */
+    padding: 20px;
+    margin-top: 25px;
+    text-align: left;
+}
+
+.info-box p {
+    margin: 8px 0;
+    color: #00dd00; /* Grunntextalitur */
+    font-size: 1em;
+}
+.info-box p strong {
+     color: #00ff00; /* Skærara fyrir áherslu */
+}
+
+.info-box .info-code {
+    font-size: 1.3em; /* Stærri kóði */
+    font-weight: normal;
+    letter-spacing: 2px;
+    color: #000; /* Svartur texti á skærum bakgrunni */
+    background-color: #00ff00; /* Skær grænn */
+    padding: 5px 8px;
+    display: inline-block;
+    margin-top: 5px;
+    text-shadow: none;
+}
+
+/* Stíll fyrir myndir */
+.content-image {
+    max-width: 220px;
+    display: block;
+    margin: 25px auto;
+    border: 1px solid #00ff00; /* Skærari rammi */
+    padding: 4px;
+    filter: grayscale(70%) contrast(1.1) brightness(1.1); /* Aðeins öðruvísi effekt */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+/* Einfaldur fótur */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #008800; /* Dökkari grænn fyrir fót */
+    font-size: 1em;
+    padding-bottom: 20px;
+}

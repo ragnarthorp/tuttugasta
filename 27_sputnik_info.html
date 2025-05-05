@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Race Continues / Cuban Revolution</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// THE SPACE AGE DAWNS: AFTER SPUTNIK //</h2>
+        <p>Sjósetning Sputnik 1 árið 1957 hleypti af stað geimkapphlaupinu fyrir alvöru. Bæði Bandaríkin og Sovétríkin juku gríðarlega fjárfestingar í geimferðaáætlunum sínum. Bandaríkin stofnuðu NASA árið 1958 til að samhæfa sínar aðgerðir. Kapphlaupið snerist ekki aðeins um vísindalega forystu heldur einnig um hernaðarlega yfirburði og hugmyndafræðilegan áróður.</p>
+        <p>Árið 1959 náðu Sovétmenn öðrum mikilvægum áfanga þegar geimfarið Luna 3 sendi fyrstu myndirnar af bakhlið tunglsins til jarðar, hluta himintunglsins sem aldrei sést frá jörðu.</p>
+
+        <hr>
+
+        <h2>// REVOLUTION IN THE CARIBBEAN: CUBA 1959 //</h2>
+        <!-- Mynd af Fidel Castro eða Che Guevara -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Che_Guevara_signature.svg/200px-Che_Guevara_signature.svg.png" alt="Undirskrift Che Guevara" class="content-image" style="filter: invert(1) brightness(1.5);"> <!-- Inverted filter for dark theme -->
+        <p>Þann 1. janúar 1959 lauk Kúbversku byltingunni þegar skæruliðar undir forystu Fidel Castro og Che Guevara hröktu einræðisherrann Fulgencio Batista frá völdum. Í fyrstu var stefna nýju stjórnarinnar óljós en hún þróaðist fljótt í átt að kommúnisma og nánum tengslum við Sovétríkin.</p>
+        <p>Byltingin á Kúbu, aðeins steinsnar frá Bandaríkjunum, átti eftir að verða stór þáttur í Kalda stríðinu og leiða til mikillar spennu, eins og Svínaflóa innrásarinnar og Kúbudeilunnar síðar.</p>
+        <p>Sama ár, 1959, urðu Alaska og Hawaii 49. og 50. ríki Bandaríkjanna.</p>
+        <p><strong>Aðgangsspurning:</strong> Hver var helsti leiðtogi Kúbversku byltingarinnar sem tók við völdum árið 1959?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #26 (Ár Afríku / Múrinn):</strong></p>
+             <p class="info-code">00111001 00110000</p>
+             <p><em>(Geymdu þetta brot. Fyrsti maður í geimnum / Berlínarmúrinn.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass27">> Leiðtogi Kúbu:</label>
+             <input type="text" id="pass27" name="pass27" autocapitalize="off">
+             <button id="submit27">Staðfesta</button>
+             <p id="error27" class="error-message" style="display: none;">// ÓÞEKKTUR BYLTINGARLEIÐTOGI //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Analyzing Revolutionary Trajectories...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit27').addEventListener('click', checkAnswer27);
+        document.getElementById('pass27').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer27();
+            }
+        });
+
+        function checkAnswer27() {
+            // Svarið er Fidel Castro
+            const correctAnswer = 'fidel castro';
+            const userAnswer = document.getElementById('pass27').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error27');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '28_cuba_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass27').value = '';
+                document.getElementById('pass27').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

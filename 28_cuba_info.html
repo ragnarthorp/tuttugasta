@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuban Revolution / Africa & The Berlin Wall</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// CASTRO TAKES POWER: CUBA ALIGNS WITH USSR //</h2>
+        <p>Eftir að Fidel Castro tók völdin á Kúbu 1959 versnaði samband eyjunnar við Bandaríkin hratt. Þjóðnýting eigna og halli að Sovétríkjunum leiddi til viðskiptabanns af hálfu Bandaríkjanna. Staðsetning Kúbu, svo nálægt Bandaríkjunum, gerði þessa þróun sérstaklega viðkvæma í Kalda stríðinu.</p>
+        <p>Árið 1960 var kallað "Ár Afríku" þar sem heilar 17 Afríkuþjóðir öðluðust sjálfstæði frá nýlenduveldunum, sem sýndi gríðarlega hröðun í afnýlenduvæðingunni.</p>
+
+        <hr>
+
+        <h2>// TENSIONS RISE: U-2 INCIDENT, GAGARIN & THE BERLIN WALL //</h2>
+        <!-- Mynd af Gagarin eða Berlínarmúrnum -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Berlinermauer.jpg/320px-Berlinermauer.jpg" alt="Berlínarmúrinn með Brandenborgarhliðið í bakgrunni" class="content-image">
+        <p>Kalda stríðið harðnaði enn frekar árin 1960-1961. Í maí 1960 skutu Sovétmenn niður bandaríska U-2 njósnaflugvél yfir Sovétríkjunum og tóku flugmanninn til fanga (U-2 atvikið), sem olli mikilli diplómatískri krísu.</p>
+        <p>Í apríl 1961 náðu Sovétmenn öðrum stórum sigri í geimkapphlaupinu þegar Yuri Gagarin varð fyrsti maðurinn til að fara út í geiminn og ljúka heilli hringferð um jörðu. Bandaríkin svöruðu með því að John F. Kennedy forseti lýsti yfir því markmiði að lenda manni á tunglinu fyrir lok áratugarins.</p>
+        <p>Í ágúst 1961, til að stöðva straum flóttamanna frá Austur- til Vestur-Berlínar, hófu austur-þýsk yfirvöld, með stuðningi Sovétríkjanna, byggingu Berlínarmúrsins sem skipti borginni í tvennt og varð að einu sterkasta tákni Kalda stríðsins og Járntjaldsins.</p>
+        <p><strong>Aðgangsspurning:</strong> Hvað hét fyrsti maðurinn sem fór út í geiminn árið 1961?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #27 (Nálægt barmi):</strong></p>
+             <p class="info-code">00110001</p>
+             <p><em>(Geymdu þetta brot. Kúbudeilan.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass28">> Fyrsti geimfari:</label>
+             <input type="text" id="pass28" name="pass28" autocapitalize="off">
+             <button id="submit28">Staðfesta</button>
+             <p id="error28" class="error-message" style="display: none;">// ÓÞEKKTUR GEIMKÖNNUÐUR //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Monitoring Ideological Borders & Space Race...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit28').addEventListener('click', checkAnswer28);
+        document.getElementById('pass28').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer28();
+            }
+        });
+
+        function checkAnswer28() {
+            // Svarið er Yuri Gagarin
+            const correctAnswer = 'yuri gagarin';
+            const userAnswer = document.getElementById('pass28').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error28');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '29_gagarin_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass28').value = '';
+                document.getElementById('pass28').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

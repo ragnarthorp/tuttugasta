@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solidarity Rises / Reagan Era & AIDS Emerges</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// SOLIDARITY'S CHALLENGE & THE IRAN-IRAQ WAR //</h2>
+        <p>Stofnun Samstöðu (Solidarity) í Póllandi árið 1980 var fordæmalaus atburður í Austurblokkinni. Hreyfingin náði gríðarlegu fylgi og setti mikla pressu á kommúnistastjórnina og Sovétríkin. Íran-Írak stríðið hélt áfram af fullum þunga og olli gífurlegu manntjóni og eyðileggingu í báðum löndum.</p>
+        <p>Morðið á John Lennon í lok árs 1980 vakti einnig heimsathygli og sorg.</p>
+
+        <hr>
+
+        <h2>// 1981: ASSASSINATION ATTEMPTS, SPACE SHUTTLE & A NEW PANDEMIC //</h2>
+        <!-- Mynd af Reagan, páfa, geimskutlunni eða AIDS borða -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/S_rean16.jpg/220px-S_rean16.jpg" alt="Ronald Reagan Bandaríkjaforseti" class="content-image">
+        <p>Árið 1981 hófst með valdatöku Ronald Reagan sem forseta Bandaríkjanna, sem boðaði harðari stefnu gegn Sovétríkjunum. Sama dag og hann tók við embætti lauk Írönsku gíslatökunni þegar gíslunum 52 var sleppt eftir 444 daga í haldi.</p>
+        <p>Árið einkenndist af tveimur alvarlegum morðtilræðum: Bæði Ronald Reagan (mars) og Jóhannes Páll II páfi (maí) særðust í skotárásum en lifðu af. Í apríl hófst nýr kafli í geimferðasögunni þegar fyrsta geimskutlan, Columbia, fór í sína jómfrúarferð.</p>
+        <p>Sama ár fóru læknar í Bandaríkjunum að taka eftir áður óþekktum sjúkdómi sem virtist leggjast á ónæmiskerfið, aðallega meðal samkynhneigðra karla. Þetta var upphafið að alnæmisfaraldrinum (AIDS), sem átti eftir að kosta milljónir mannslífa um allan heim. IBM gaf einnig út sína fyrstu einkatölvu (IBM PC), sem átti stóran þátt í að festa einkatölvuna í sessi.</p>
+        <p>Í desember 1981, undir þrýstingi frá Sovétríkjunum og til að reyna að brjóta niður Samstöðu, lýsti pólska kommúnistastjórnin yfir herlögum í landinu.</p>
+        <p><strong>Aðgangsspurning:</strong> Hvaða nýr og banvænn sjúkdómur (skammstöfun) kom fyrst fram á sjónarsviðið árið 1981?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #41 (Kalt stríð hitnar):</strong></p>
+             <p class="info-code">01100101</p>
+             <p><em>(Geymdu þetta brot. KAL 007 / SDI "Star Wars".)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass42">> Skammstöfun sjúkdóms:</label>
+             <input type="text" id="pass42" name="pass42" autocapitalize="off">
+             <button id="submit42">Staðfesta</button>
+             <p id="error42" class="error-message" style="display: none;">// ÓÞEKKTUR FARALDUR //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Analyzing Public Health Crises & Political Crackdowns...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit42').addEventListener('click', checkAnswer42);
+        document.getElementById('pass42').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer42();
+            }
+        });
+
+        function checkAnswer42() {
+            // Svarið er AIDS
+            const correctAnswer = 'aids';
+            const userAnswer = document.getElementById('pass42').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error42');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '43_aids_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass42').value = '';
+                document.getElementById('pass42').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

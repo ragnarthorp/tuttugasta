@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D-Day Landings / Liberation of Paris</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// THE ITALIAN CAMPAIGN & THE EASTERN FRONT //</h2>
+        <p>Árið 1943 höfðu Bandamenn hafið innrás sína á Ítalíu og þótt baráttan þar væri hörð og tæki langan tíma, batt hún niður þýskar hersveitir. Á austurvígstöðvunum hélt Rauði herinn áfram sókn sinni eftir sigurinn við Stalíngrad og Kursk, frelsaði stór landsvæði og þrengdi stöðugt að Þýskalandi.</p>
+        <p>Ákvörðunin sem tekin var á Teheran ráðstefnunni um að opna nýjar vígstöðvar í vestri var nú að koma til framkvæmda.</p>
+
+        <hr>
+
+        <h2>// OPERATION OVERLORD: D-DAY AND THE LIBERATION OF FRANCE //</h2>
+        <!-- Mynd af D-Day löndunum -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/NormandySupply_edit.jpg/320px-NormandySupply_edit.jpg" alt="Bandamenn koma vistum á land í Normandí eftir D-daginn" class="content-image">
+        <p>Þann 6. júní 1944 hófst D-dagurinn. Undir yfirskriftinni "Operation Overlord" gerðu herir Bandamanna (aðallega Bandaríkjamenn, Bretar og Kanadamenn) innrás á strendur Normandí í Frakklandi. Þetta var stærsta innrás af sjó í sögunni og markaði upphaf frelsunar Vestur-Evrópu.</p>
+        <p>Eftir harða bardaga á innrásarsvæðinu tókst Bandamönnum að brjótast út úr Normandí og sækja hratt fram. París var frelsuð í ágúst 1944. Sama sumar hóf sovéski herinn Operation Bagration, sem gereyddi stórum hluta þýska hersins á austurvígstöðvunum. Í júlí sama ár mistókst samsæri þýskra herforingja um að ráða Hitler af dögum (20. júlí samsærið).</p>
+        <p><strong>Aðgangsspurning:</strong> Hvert var kóðanafn Bandamanna yfir alla hernaðaraðgerðina sem fól í sér innrásina í Normandí árið 1944?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #16 (Lokasprettur):</strong></p>
+             <p class="info-code">00100000</p>
+             <p><em>(Geymdu þetta brot.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass17">> Kóðanafn aðgerðar:</label>
+             <input type="text" id="pass17" name="pass17" autocapitalize="off">
+             <button id="submit17">Staðfesta</button>
+             <p id="error17" class="error-message" style="display: none;">// ÓGILD AÐGERÐARSKILGREINING //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Processing Liberation Protocols...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit17').addEventListener('click', checkAnswer17);
+        document.getElementById('pass17').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer17();
+            }
+        });
+
+        function checkAnswer17() {
+            // Svarið er Overlord
+            const correctAnswer = 'overlord';
+            const userAnswer = document.getElementById('pass17').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error17');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '18_dday_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass17').value = '';
+                document.getElementById('pass17').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

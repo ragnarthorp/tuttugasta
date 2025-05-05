@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aðgangur Veittur / Skrá 1912</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content-box">
+        <h2>// Aðgangur Veittur: Gögn um RMS Titanic //</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/RMS_Titanic_3.jpg/320px-RMS_Titanic_3.jpg" alt="Gögn: Titanic" class="content-image">
+        <p>Greining: Skip rakst á ísjaka, Norður-Atlantshaf, 15. apríl 1912. Yfir 1500 dóu. Orsakaði breytingar á öryggisreglugerðum sjóflutninga.</p>
+
+        <div class="info-box">
+            <p><strong>>> Gagnabrot #1:</strong></p>
+            <p class="info-code">11000011</p>
+            <p><em>(Geymdu þetta brot.)</em></p>
+        </div>
+        <hr>
+
+        <h2>// Nýtt Markmið: Atvik í Sarajevó //</h2>
+        <p>Greining: Vaxandi spenna í Evrópu eftir 1912. Ár 1914, morð á háttsettum einstaklingi í Sarajevó af serbneskum þjóðernissinna hrinti af stað keðjuverkun.</p>
+        <p>Fórnarlamb: Franz Ferdinand, erkihertogi Austurríkis-Ungverjalands.</p>
+        <p><strong>Aðgangsspurning:</strong> Hvert var <strong>eftirnafn</strong> árásaraðilans?</p>
+
+        <div class="input-area">
+             <label for="pass2">> Eftirnafn:</label>
+             <input type="text" id="pass2" name="pass2">
+             <button id="submit2">Staðfesta</button>
+             <p id="error2" class="error-message" style="display: none;">// Röng Gögn //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Vinnsla í gangi...</p>
+    </footer>
+
+    <script>
+         // (Sami JavaScript kóði og í '2_princip_puzzle.html' áður,
+         //  en vísar núna á '3_princip_info.html')
+
+        document.getElementById('submit2').addEventListener('click', checkAnswer2);
+        document.getElementById('pass2').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer2();
+            }
+        });
+
+        function checkAnswer2() {
+            const correctAnswer = 'princip';
+            const userAnswer = document.getElementById('pass2').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error2');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '3_princip_info.html'; // <- Næsta skrá
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass2').value = '';
+                document.getElementById('pass2').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

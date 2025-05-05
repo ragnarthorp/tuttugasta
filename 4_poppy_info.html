@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tákn WWI / Þraut Ísland-1918</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// GREINING: TÁKN FRÁ VÍGVELLINUM //</h2>
+        <p>Staðfesting: Valmúinn (enska: poppy) varð varanlegt tákn til minningar um fórnarlömb Fyrri heimsstyrjaldarinnar. Rauði liturinn táknaði blóðið sem hellt var niður á vígvöllum Vesturvígstöðvanna, eins og í Flandursskaga, þar sem milljónir létu lífið í grimmilegum skotgrafahernaði.</p>
+        <p>Stríðinu mikla lauk loks með vopnahléi þann 11. nóvember 1918, en sár þess voru lengi að gróa.</p>
+
+        <div class="info-box">
+            <p><strong>>> Gagnabrot #3:</strong></p>
+            <p class="info-code">01101100</p>
+            <p><em>(Geymdu þetta brot. Lok stríðsins.)</em></p>
+        </div>
+        <hr>
+
+        <h2>// NÝ GÖGN ÞARF: Áhrif á ÍSLANDI //</h2>
+        <p>Árið 1918 var afdrifaríkt, ekki bara vegna stríðsloka. Ísland varð fullvalda ríki þetta ár. En náttúruöflin létu einnig til sín taka.</p>
+        <p>Veturinn 1918 varð sérstaklega harður á Íslandi, með miklum frostum og hafís sem olli erfiðleikum um allt land.</p>
+        <p><strong>Aðgangsspurning:</strong> Hvað var þessi tiltekni vetur kallaður á Íslandi, oft með viðskeytinu "mikli"?</p>
+        <p style="text-align: center;">___________ mikli.</p>
+
+        <div class="input-area">
+             <label for="pass4">> Nafn vetrar:</label>
+             <input type="text" id="pass4" name="pass4">
+             <button id="submit4">Staðfesta</button>
+             <p id="error4" class="error-message" style="display: none;">// Óþekkt Tímabil //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Kerfi bíður eftir svari...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit4').addEventListener('click', checkAnswer4);
+        document.getElementById('pass4').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer4();
+            }
+        });
+
+        function checkAnswer4() {
+            const correctAnswer = 'frostaveturinn'; // Svarið
+            const userAnswer = document.getElementById('pass4').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error4');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                // Við nefnum næstu síðu '5_frostavetur_info.html'
+                window.location.href = '5_frostavetur_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass4').value = '';
+                document.getElementById('pass4').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

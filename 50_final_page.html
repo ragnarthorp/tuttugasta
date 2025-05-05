@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verkefni Lokið: Loka Afkóðun</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h1>// KERFISGREININGU LOKIÐ: 20. ÖLDIN //</h1>
+        <p style="text-align: center; font-size: 1.2em; color: #33cc33;">NÆSTUM ÞVÍ BÚIN(N)! Þú hefur ferðast í gegnum öldina. Nú er aðeins loka afkóðunin eftir.</p>
+        <p>Á leið þinni safnaðir þú röð af <strong>binary kóðabrotum</strong> (röðum af 8 núllum og einum). Hvert brot táknar einn staf eða tákn.</p>
+
+        <hr>
+
+        <h2>// LOKA AFKÓÐUNARFERLI //</h2>
+        <p><strong>Verkefni:</strong></p>
+        <ol style="text-align: left; margin-left: 30px; margin-bottom: 25px;">
+            <li>Taktu öll binary kóðabrotin sem þú safnaðir (ættu að vera 47 talsins) og skrifaðu þau niður í réttri röð, án bila á milli. Þú færð eina mjög langa runu af núllum og einum.</li>
+            <li>Farðu á vefsíðuna: <br>
+                <a href="https://www.rapidtables.com/convert/number/binary-to-ascii.html" target="_blank" class="button" style="margin-top: 10px; font-size: 1em; padding: 8px 15px;">Binary to ASCII Converter</a>
+            </li>
+            <li>Límdu löngu binary rununa þína inn í viðeigandi reit á síðunni og smelltu á "Convert".</li>
+            <li>Niðurstaðan ætti að vera skiljanleg setning á íslensku.</li>
+            <li>Sláðu þessa afkóðuðu setningu nákvæmlega inn í reitinn hér fyrir neðan til að ljúka verkefninu.</li>
+        </ol>
+
+        <div class="input-area">
+             <label for="finalSentence">> Afkóðuð setning:</label>
+             <!-- Nota textarea fyrir lengri texta -->
+             <textarea id="finalSentence" name="finalSentence" rows="3" style="width: 90%; max-width: 500px; background-color: #111; color: #0f0; border: 1px solid #008800; padding: 10px; font-family: inherit; font-size: 1em; margin-top: 5px; border-radius: 0; outline: none;"></textarea>
+             <button id="submitFinalSentence">Ljúka Verkefni</button>
+             <p id="errorFinalSentence" class="error-message" style="display: none;">// ÓGILD LOKASKILABOÐ //</p>
+             <p id="successFinalSentence" class="success-message" style="display: none; color: #33cc33; margin-top: 15px; font-size: 1.3em;">
+                // AÐGANGUR OPNAÐUR - VERKEFNI LOKIÐ! //<br>TIL HAMINGJU MEÐ ÁRANGURINN!
+            </p>
+        </div>
+    </div>
+    <footer>
+        <p>// Tenging rofin - Lærðu af fortíðinni //</p>
+    </footer>
+
+    <script>
+        // Bæta við stíl fyrir success message ef hann vantar (gæti þurft aftur ef vafrinn endurhleður allt)
+        const styleExists = document.querySelector('style#dynamicStyles');
+        if (!styleExists) {
+            const successStyle = document.createElement('style');
+            successStyle.id = 'dynamicStyles';
+            successStyle.innerHTML = `.success-message { color: #33cc33; font-weight: bold; margin-top: 15px; text-align: center; font-size: 1.1em; text-shadow: 0 0 5px rgba(51, 204, 51, 0.7); }`;
+            document.head.appendChild(successStyle);
+        }
+
+        document.getElementById('submitFinalSentence').addEventListener('click', checkFinalSentence);
+        document.getElementById('finalSentence').addEventListener('keypress', function(event) {
+            // Leyfa Enter innan textarea en ekki senda formið
+            if (event.key === 'Enter' && !event.shiftKey) {
+                // Þú gætir viljað að Enter ýti á takkann hér, eða ekki.
+                // Eins og er gerir það ekkert, notandi verður að smella á takka.
+                // event.preventDefault(); // Fjarlægt til að leyfa nýjar línur
+            }
+        });
+
+        function checkFinalSentence() {
+            // Rétta setningin
+            const correctSentence = 'Öld öfganna hófst 1. janúar 1901 og lauk 31. desember 2000.';
+            // Tökum gildið úr textarea, fjarlægjum bil í byrjun/enda og mögulega normaliserum bil?
+            // Hér er best að vera svolítið sveigjanlegur með innsláttinn, t.d. leyfa mismunandi bilsetningu.
+            // Einföldustu leiðin er að bera saman án tillits til hástafa/lágstafa og fjarlægja öll aukabil?
+            // Þetta er samt hættulegt ef nákvæm setning er krafist. Við prufum nákvæman samanburð fyrst.
+
+            const userAnswer = document.getElementById('finalSentence').value.trim();
+            const errorMessage = document.getElementById('errorFinalSentence');
+            const successMessage = document.getElementById('successFinalSentence');
+            const submitButton = document.getElementById('submitFinalSentence');
+
+            // Nákvæmur samanburður (passa upp á punktinn í lokin)
+            if (userAnswer === correctSentence) {
+                // Rétt svar
+                errorMessage.style.display = 'none';
+                successMessage.style.display = 'block';
+                 // Gera takkann og textasvæðið óvirkt (valfrjálst)
+                 submitButton.disabled = true;
+                 submitButton.style.opacity = '0.5';
+                 submitButton.style.cursor = 'default';
+                 document.getElementById('finalSentence').disabled = true;
+
+            } else {
+                // Rangt svar
+                successMessage.style.display = 'none';
+                errorMessage.style.display = 'block';
+                // Ekki hreinsa textarea, leyfa notanda að laga
+                document.getElementById('finalSentence').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 4000); // Lengri tími fyrir villu
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aðgangspunktur Alpha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content-box">
+        <h2>// Aðgangsstaðfesting Krafist //</h2>
+        <p>Sendi hnit...</p>
+        <p class="coordinates">41°43′32″N 49°56′49″W</p>
+        <p>Auðkenni tengt þessum hnitum er lykilorð.</p>
+        <div class="input-area">
+            <label for="pass1">> Lykilorð:</label>
+            <input type="text" id="pass1" name="pass1" autofocus>
+            <button id="submit1">Staðfesta</button>
+            <p id="error1" class="error-message" style="display: none;">// Aðgangi Hafnað //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Tenging í bið...</p>
+    </footer>
+
+    <script>
+        // (Sami JavaScript kóði og í '1_titanic_puzzle.html' áður,
+        //  en vísar núna á '2_titanic_info.html')
+
+        document.getElementById('submit1').addEventListener('click', checkAnswer1);
+        document.getElementById('pass1').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer1();
+            }
+        });
+
+        function checkAnswer1() {
+            const correctAnswer = 'titanic';
+            const userAnswer = document.getElementById('pass1').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error1');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '2_titanic_info.html'; // <- Næsta skrá
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass1').value = '';
+                document.getElementById('pass1').focus();
+                 setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

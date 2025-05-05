@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>War Expands / Barbarossa & Pearl Harbor</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// BRITAIN HOLDS / HITLER TURNS EAST: OPERATION BARBAROSSA //</h2>
+        <p>Eftir að hafa mistekist að brjóta á bak aftur mótstöðu Breta í Orrustunni um Bretland (Operation Sea Lion var aflýst), sneri Adolf Hitler sér að nýju og gríðarstóru markmiði: Sovétríkjunum. Þrátt fyrir griðarsáttmálann frá 1939, leit Hitler á kommúnismann og slavnesku þjóðirnar sem sína helstu óvini og lífsrými (Lebensraum) í austri sem nauðsynlegt fyrir Þýskaland.</p>
+        <p>Þann 22. júní 1941 hófst Operation Barbarossa, innrás Þýskalands og bandamanna þeirra í Sovétríkin með milljónum hermanna. Í fyrstu gekk innrásin hratt og vel fyrir sig, en harðnandi vetur og seigla Rauða hersins stöðvuðu framrásina fyrir utan Moskvu.</p>
+
+        <hr>
+
+        <h2>// THE WAR BECOMES GLOBAL: PEARL HARBOR //</h2>
+        <!-- Mynd af árásinni á Pearl Harbor -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/USS_Shaw_exploding_during_the_attack_on_Pearl_Harbor_-_NARA_80-G-16871_-_29558914.jpg/320px-USS_Shaw_exploding_during_the_attack_on_Pearl_Harbor_-_NARA_80-G-16871_-_29558914.jpg" alt="USS Shaw springur í loft upp í Pearl Harbor" class="content-image">
+        <p>Á meðan geisaði stríð einnig í Asíu þar sem Japan sótti fram í Kína og Suðaustur-Asíu. Til að bregðast við útþenslustefnu Japans settu Bandaríkin viðskiptaþvinganir á landið, sérstaklega á olíu.</p>
+        <p>Þann 7. desember 1941 gerði japanski flotinn og flugherinn óvænta og skelfilega árás á flota Bandaríkjanna í Pearl Harbor á Hawaii. Árásin sökkti eða skemmdi fjölda herskipa og drap þúsundir bandarískra hermanna. Daginn eftir lýstu Bandaríkin yfir stríði á hendur Japan og skömmu síðar lýstu Þýskaland og Ítalía yfir stríði á hendur Bandaríkjunum. Seinni heimsstyrjöldin var nú orðin að raunverulegu heimsstríði.</p>
+        <p><strong>Aðgangsspurning:</strong> Á hvaða eyju á Hawaii er flotastöðin Pearl Harbor staðsett?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #13 (Vendipunktur):</strong></p>
+             <p class="info-code">11000011 10110011</p>
+             <p><em>(Geymdu þetta brot.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass14">> Eyja á Hawaii:</label>
+             <input type="text" id="pass14" name="pass14" autocapitalize="off">
+             <button id="submit14">Staðfesta</button>
+             <p id="error14" class="error-message" style="display: none;">// ÓÞEKKT LANDSVÆÐI //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Processing Global Conflict Data...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit14').addEventListener('click', checkAnswer14);
+        document.getElementById('pass14').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer14();
+            }
+        });
+
+        function checkAnswer14() {
+            // Svarið er Oahu
+            const correctAnswer = 'oahu';
+            const userAnswer = document.getElementById('pass14').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error14');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '15_pearl_harbor_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass14').value = '';
+                document.getElementById('pass14').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

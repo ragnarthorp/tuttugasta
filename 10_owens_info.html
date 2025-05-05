@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigrar og Slys / Stríðsboði</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// SIGUR JESSE OWENS: ÁRÓÐURSÁFALL FYRIR NASISTA //</h2>
+        <!-- Mynd af Jesse Owens á ÓL 1936 -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Jesse_Owens_Berlin_1936.jpg/280px-Jesse_Owens_Berlin_1936.jpg" alt="Jesse Owens á Ólympíuleikunum 1936" class="content-image">
+        <p>Jesse Owens vann fjögur gullverðlaun í frjálsum íþróttum á Ólympíuleikunum í Berlín 1936, sem var mikið áfall fyrir kynþáttahyggju og áróður Nasistastjórnarinnar. Afrek hans urðu táknræn fyrir baráttuna gegn fordómum.</p>
+        <p>Árið eftir, 1937, lauk tímabili risaloftskipanna á hörmulegan hátt þegar þýska loftskipið Hindenburg sprakk við lendingu í New Jersey. Sama ár hóf Japan innrás sína í Kína og Seinni heimsstyrjöldin hófst í raun í Asíu.</p>
+
+        <hr>
+
+        <h2>// AÐDRAGANDI STÓRSTRÍÐS Í EVRÓPU: ANSCHLUSS //</h2>
+        <p>Spennan í Evrópu hélt áfram að magnast. Árið 1938 innlimaði Þýskaland Hitlers Austurríki í atburði sem kallaður var "Anschluss", þrátt fyrir andstöðu margra Austurríkismanna og brot á Versalasamningnum. Vesturveldin brugðust lítið við.</p>
+        <p>Seinna sama ár átti hin alræmda Kristallnacht sér stað í Þýskalandi, skipulögð árás á gyðinga, verslanir þeirra og samkunduhús.</p>
+        <p><strong>Aðgangsspurning:</strong> Hvaða ár fór Anschluss (innlimun Austurríkis í Þýskaland) fram?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #9 (Loftskipsár):</strong></p>
+             <p class="info-code">01100001 01101110</p>
+             <p><em>(Geymdu þetta brot.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass10">> Ár innlimunar:</label>
+             <input type="text" id="pass10" name="pass10" inputmode="numeric" pattern="[0-9]*">
+             <button id="submit10">Staðfesta</button>
+             <p id="error10" class="error-message" style="display: none;">// ÓGILD TÍMASETNING //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Met Póltíska Stöðu...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit10').addEventListener('click', checkAnswer10);
+        document.getElementById('pass10').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer10();
+            }
+        });
+
+        function checkAnswer10() {
+            // Svarið er 1938
+            const correctAnswer = '1938';
+            const userAnswer = document.getElementById('pass10').value.trim();
+            const errorMessage = document.getElementById('error10');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '11_anschluss_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass10').value = '';
+                document.getElementById('pass10').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

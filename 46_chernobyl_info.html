@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chernobyl Disaster / INF Treaty & First Intifada</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// THE CHERNOBYL CATASTROPHE & ITS LEGACY //</h2>
+        <p>Chernobyl slysið í Úkraínu árið 1986 var ekki aðeins gríðarlegur umhverfis- og mannúðarharmleikur heldur hafði það einnig pólitískar afleiðingar. Það afhjúpaði veikleika í sovésku kerfi og leyndarhyggju og jók þrýsting á Gorbachev að halda áfram með Glasnost (opnun) stefnu sína.</p>
+        <p>Challenger slysið sama ár var einnig mikið áfall fyrir geimferðir og leiddi til endurskoðunar á öryggismálum geimskutluáætlunarinnar.</p>
+
+        <hr>
+
+        <h2>// ARMS CONTROL & RENEWED CONFLICT: 1987 //</h2>
+        <!-- Mynd af Reagan og Gorbatsjov að undirrita INF eða af Intifada -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Reagan_and_Gorbachev_signing_INF_Treaty.jpg/320px-Reagan_and_Gorbachev_signing_INF_Treaty.jpg" alt="Reagan og Gorbachev undirrita INF-samninginn 1987" class="content-image">
+        <p>Þrátt fyrir áföllin héldu viðræður milli Bandaríkjanna og Sovétríkjanna áfram. Árið 1987 náðist mikilvægur áfangi í afvopnunarmálum þegar Ronald Reagan og Mikhail Gorbachev undirrituðu INF-samninginn (Intermediate-Range Nuclear Forces Treaty). Samningurinn kvað á um eyðingu allra land-staðsettra skammdrægra og meðaldrægra kjarnorkueldflauga ríkjanna (drægni 500-5500 km).</p>
+        <p>Þetta var í fyrsta sinn sem heill flokkur kjarnavopna var fjarlægður með samkomulagi og var talið stórt skref í átt að minnkandi spennu.</p>
+        <p>Hins vegar braust út nýr kafli í deilum Ísraela og Palestínumanna í desember 1987 þegar Fyrsta Intifada (uppreisn) Palestínumanna hófst á hernumdu svæðunum (Vesturbakkanum og Gasasvæðinu). Uppreisnin einkenndist af mótmælum, verkföllum og grjótkasti gegn ísraelskum hermönnum og stóð í nokkur ár.</p>
+        <p><strong>Aðgangsspurning:</strong> Hver er skammstöfunin á samningnum frá 1987 sem fjarlægði meðaldrægar kjarnorkueldflaugar?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #45 (Lok stríða / Múrinn fellur):</strong></p>
+             <p class="info-code">01110010</p>
+             <p><em>(Geymdu þetta brot. Endalok Sovét í Afg. / Fall Berlínarmúrsins.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass46">> Skammstöfun samnings:</label>
+             <input type="text" id="pass46" name="pass46" autocapitalize="off">
+             <button id="submit46">Staðfesta</button>
+             <p id="error46" class="error-message" style="display: none;">// ÓÞEKKTUR AFVOPNUNARSAMNINGUR //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Analyzing Arms Control Treaties & Regional Uprisings...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit46').addEventListener('click', checkAnswer46);
+        document.getElementById('pass46').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer46();
+            }
+        });
+
+        function checkAnswer46() {
+            // Svarið er INF
+            const correctAnswer = 'inf';
+            const userAnswer = document.getElementById('pass46').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error46');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '47_inf_treaty_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass46').value = '';
+                document.getElementById('pass46').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

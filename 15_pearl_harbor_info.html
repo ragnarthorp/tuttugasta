@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turning Point 1942 / Midway & El Alamein</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// THE TIDE TURNS: BATTLES OF 1942 //</h2>
+        <!-- Mynd af flugmóðurskipi í Orrustunni við Midway -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/USS_Yorktown_%28CV-5%29_is_hit_on_4_June_1942.jpg/320px-USS_Yorktown_%28CV-5%29_is_hit_on_4_June_1942.jpg" alt="USS Yorktown verður fyrir sprengju við Midway" class="content-image">
+        <p>Árið 1942 markaði þáttaskil í Seinni heimsstyrjöldinni þar sem Bandamenn fóru að ná undirtökunum á nokkrum vígstöðvum. Í Kyrrahafinu vann bandaríski flotinn afgerandi sigur á þeim japanska í Orrustunni við Midway í júní. Þessi sigur stöðvaði sókn Japana og er oft talinn vendipunktur stríðsins í Kyrrahafi.</p>
+        <p>Í Norður-Afríku háðu hersveitir Breta og bandamanna þeirra harða baráttu gegn Öxulveldunum (Þýskalandi og Ítalíu). Í Orrustunni við El Alamein í Egyptalandi í október-nóvember tókst Bretum undir stjórn Montgomery hershöfðingja að sigra hersveitir Rommels og hefja sókn sem að lokum hrakti Öxulveldin frá Afríku.</p>
+
+        <hr>
+
+        <h2>// THE DARKEST CHAPTER: THE HOLOCAUST & STALINGRAD //</h2>
+        <p>Á sama tíma og hernaðarátökin stigmögnuðust, hófst kerfisbundnasti og skelfilegasti hluti Helfararinnar (The Holocaust) árið 1942. Nasistar hófu fjöldamorð á gyðingum og öðrum minnihlutahópum í útrýmingarbúðum eins og Auschwitz.</p>
+        <p>Á austurvígstöðvunum hófst hin gríðarlega Orrusta um Stalíngrad í ágúst. Þessi blóðuga barátta átti eftir að standa í marga mánuði og verða einn af stærstu og mikilvægustu vendipunktum stríðsins í Evrópu. Einnig hófst hið leynilega Manhattan verkefni í Bandaríkjunum árið 1942, með það að markmiði að þróa kjarnorkusprengju.</p>
+        <p><strong>Aðgangsspurning:</strong> Hvaða mikilvæga orrusta hófst í Sovétríkjunum í ágúst 1942 og varð að vendipunkti á austurvígstöðvunum?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #14 (Fall Öxuls):</strong></p>
+             <p class="info-code">01100110</p>
+             <p><em>(Geymdu þetta brot.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass15">> Orrustustaður (Sovét):</label>
+             <input type="text" id="pass15" name="pass15" autocapitalize="off">
+             <button id="submit15">Staðfesta</button>
+             <p id="error15" class="error-message" style="display: none;">// ÓÞEKKT VÍGSTÖÐ //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Assessing Strategic Shifts...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit15').addEventListener('click', checkAnswer15);
+        document.getElementById('pass15').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer15();
+            }
+        });
+
+        function checkAnswer15() {
+            // Svarið er Stalingrad
+            const correctAnswer = 'stalingrad';
+            const userAnswer = document.getElementById('pass15').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error15');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '16_stalingrad_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass15').value = '';
+                document.getElementById('pass15').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

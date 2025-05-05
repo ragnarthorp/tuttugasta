@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kreppan Dýpkar / Ný Von</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// ÁHRÍF KREPPUÁRANA: ÁRATUGURINN EFTIR 1929 //</h2>
+        <!-- Mynd af biðröð eftir mat í kreppunni -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Lange-MigrantMother.jpg/263px-Lange-MigrantMother.jpg" alt="Táknmynd Kreppunnar miklu: 'Migrant Mother'" class="content-image">
+        <p>Eftir hrunið á Wall Street 1929 dýpkaði Kreppan mikla hratt og breiddist út um allan heim. Milljónir misstu vinnuna, fyrirtæki fóru á hausinn og fátækt varð útbreidd. Í Bandaríkjunum urðu "Hoovervilles" (braggahverfi) til þar sem heimilislausir söfnuðust saman.</p>
+        <p>Efnahagsörðugleikarnir sköpuðu jarðveg fyrir pólitískar öfgar. Í Þýskalandi jukust áhrif Nasistaflokksins til muna í kjölfar kreppunnar. Á sama tíma, árið 1930, uppgötvaði stjörnufræðingurinn Clyde Tombaugh dvergreikistjörnuna Plútó, sem minnir á að vísindalegar framfarir héldu áfram þrátt fyrir erfiða tíma.</p>
+
+        <hr>
+
+        <h2>// NÝ STEFNA Í BANDARÍKJUNUM //</h2>
+        <p>Árið 1933 tók Franklin D. Roosevelt við sem forseti Bandaríkjanna og hét því að takast á við kreppuna með nýjum og róttækum aðgerðum. Sama ár var Adolf Hitler skipaður kanslari Þýskalands, sem markaði upphaf mjög ólíkrar leiðar þar í landi.</p>
+        <p><strong>Aðgangsspurning:</strong> Hvað kallaðist heildstætt safn opinberra framkvæmda, laga og umbóta sem Roosevelt kynnti til sögunnar til að berjast gegn kreppunni?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #7 (Valdaár):</strong></p>
+             <p class="info-code">01100110 01100111</p>
+             <p><em>(Geymdu þetta brot.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass8">> Nafn áætlunar:</label>
+             <input type="text" id="pass8" name="pass8" autocapitalize="off">
+             <button id="submit8">Staðfesta</button>
+             <p id="error8" class="error-message" style="display: none;">// ÓÞEKKT AÐGERÐAÁÆTLUN //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Endurskipulagning Kerfis...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit8').addEventListener('click', checkAnswer8);
+        document.getElementById('pass8').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer8();
+            }
+        });
+
+        function checkAnswer8() {
+            // Svarið er "New Deal"
+            const correctAnswer = 'new deal';
+            const userAnswer = document.getElementById('pass8').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error8');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '9_newdeal_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass8').value = '';
+                document.getElementById('pass8').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>After the Brink / JFK & Civil Rights</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// STEPPING BACK FROM THE BRINK: THE AFTERMATH OF THE CUBAN MISSILE CRISIS //</h2>
+        <p>Kúbudeilan 1962 hafði sýnt risaveldunum hversu hættulegt Kalda stríðið og kjarnorkukapphlaupið var orðið. Í kjölfarið var komið á beinni símalínu ("heitulínan") milli leiðtoga Bandaríkjanna og Sovétríkjanna til að auðvelda samskipti í krísuástandi. Einnig var undirritaður samningur um takmarkað bann við tilraunum með kjarnorkuvopn (Limited Test Ban Treaty) árið 1963.</p>
+        <p>Þrátt fyrir þessa viðleitni til að draga úr spennu héldu átök Kalda stríðsins þó áfram víða um heim.</p>
+
+        <hr>
+
+        <h2>// HOPE AND TRAGEDY: CIVIL RIGHTS & THE ASSASSINATION OF JFK //</h2>
+        <!-- Mynd af MLK eða JFK -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Martin_Luther_King%2C_Jr..jpg/260px-Martin_Luther_King%2C_Jr..jpg" alt="Martin Luther King Jr." class="content-image">
+        <p>Árið 1963 var einnig mikilvægt ár í baráttu svartra Bandaríkjamanna fyrir borgararéttindum. Hápunkturinn var Marsinn á Washington fyrir störfum og frelsi í ágúst, þar sem hundruð þúsunda manna komu saman til að krefjast jafnréttis. Þar flutti Dr. Martin Luther King Jr. sína frægu "I Have a Dream" ræðu.</p>
+        <p>Aðeins þremur mánuðum síðar, þann 22. nóvember 1963, var heimurinn hins vegar í áfalli þegar John F. Kennedy, forseti Bandaríkjanna, var myrtur í Dallas í Texas. Morðið vakti upp ótal spurningar og samsæriskenningar og hafði djúpstæð áhrif á bandarískt samfélag og stjórnmál. Lyndon B. Johnson varaforseti tók við embættinu.</p>
+        <p><strong>Aðgangsspurning:</strong> Hvaða þrjú orð (á ensku) eru frægasti hluti titils ræðu Martin Luther King Jr. frá marsinum á Washington?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #29 (Réttindi / Stríð):</strong></p>
+             <p class="info-code">01101111</p>
+             <p><em>(Geymdu þetta brot. Civil Rights Act / Tonkinflói.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass30">> Fræg ræða (3 ensk orð):</label>
+             <input type="text" id="pass30" name="pass30" autocapitalize="off">
+             <button id="submit30">Staðfesta</button>
+             <p id="error30" class="error-message" style="display: none;">// ÓÞEKKT MANNRÉTTINDAYFIRLÝSING //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Analyzing Civil Rights Movements & Political Shockwaves...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit30').addEventListener('click', checkAnswer30);
+        document.getElementById('pass30').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer30();
+            }
+        });
+
+        function checkAnswer30() {
+            // Svarið er I Have a Dream
+            const correctAnswer = 'i have a dream';
+            const userAnswer = document.getElementById('pass30').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error30');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '31_jfk_assassination_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass30').value = '';
+                document.getElementById('pass30').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

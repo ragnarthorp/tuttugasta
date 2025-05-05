@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oil Crisis / End of Vietnam War & Rise of Microsoft</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// OIL SHOCKS & POLITICAL TURMOIL: THE EARLY 70s //</h2>
+        <p>Olíukreppan sem hófst 1973, að miklu leyti vegna aðgerða OPEC (Organization of the Petroleum Exporting Countries), hafði djúpstæð áhrif á heimshagkerfið og leiddi til orkusparnaðaraðgerða og aukinnar áherslu á aðra orkugjafa. Watergate hneykslið og afsögn Nixons forseta árið 1974 olli einnig miklu umróti í bandarískum stjórnmálum.</p>
+        <p>Þessir atburðir sýndu fram á hve samtvinnaður heimurinn var orðinn, bæði efnahagslega og pólitískt.</p>
+
+        <hr>
+
+        <h2>// THE FALL OF SAIGON & THE RISE OF THE KHMER ROUGE & MICROSOFT //</h2>
+        <!-- Mynd af flótta frá Saigon eða Pol Pot -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Saigon-hubert-van-es.jpg/300px-Saigon-hubert-van-es.jpg" alt="Þyrla bjargar fólki af þaki í Saigon 1975" class="content-image">
+        <p>Árið 1975 lauk Víetnamstríðinu loksins. Eftir að bandarískir hermenn höfðu yfirgefið landið árið 1973, hófu Norður-Víetnamar loka sókn sína. Þann 30. apríl 1975 féll Saigon, höfuðborg Suður-Víetnam, í hendur kommúnista og landið var sameinað undir stjórn þeirra.</p>
+        <p>Skömmu áður, í apríl 1975, höfðu Rauðu khmerarnir undir forystu Pol Pot tekið völdin í nágrannalandinu Kambódíu. Þeir hófu skelfilega ógnarstjórn og þjóðarmorð ("Killing Fields") sem kostaði um 1.7 milljónir manna lífið á næstu fjórum árum.</p>
+        <p>Á allt öðrum nótum var árið 1975 einnig fæðingarár eins áhrifamesta tæknifyrirtækis sögunnar. Tveir ungir menn, Bill Gates og Paul Allen, stofnuðu lítið fyrirtæki sem átti eftir að gegna lykilhlutverki í tölvubyltingunni.</p>
+        <p><strong>Aðgangsspurning:</strong> Hvað hét fyrirtækið sem Bill Gates og Paul Allen stofnuðu árið 1975?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #37 (Fyrstu PC / Geimskutla):</strong></p>
+             <p class="info-code">00100000</p>
+             <p><em>(Geymdu þetta brot. Apple II / Star Wars / Voyager.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass38">> Nafn tæknifyrirtækis:</label>
+             <input type="text" id="pass38" name="pass38" autocapitalize="off">
+             <button id="submit38">Staðfesta</button>
+             <p id="error38" class="error-message" style="display: none;">// ÓÞEKKTUR HUGBÚNAÐARFRAMLEIÐANDI //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Processing Fall of Nations & Rise of Corporations...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit38').addEventListener('click', checkAnswer38);
+        document.getElementById('pass38').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer38();
+            }
+        });
+
+        function checkAnswer38() {
+            // Svarið er Microsoft
+            const correctAnswer = 'microsoft';
+            const userAnswer = document.getElementById('pass38').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error38');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '39_microsoft_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass38').value = '';
+                document.getElementById('pass38').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

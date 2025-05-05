@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korean War Stalemate / Post-Stalin Era</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// KOREAN WAR: STALEMATE AT THE 38TH PARALLEL //</h2>
+        <p>Kóreustríðið, sem hófst með innrás Norður-Kóreu yfir 38. breiddargráðuna árið 1950, varð fljótt að blóðugum átökum milli herja Sameinuðu þjóðanna (aðallega Bandaríkjamanna) og Suður-Kóreu annars vegar, og Norður-Kóreu og Kína hins vegar. Eftir miklar sveiflur í hernaðargæfunni fram og til baka yfir skagann, festust víglínurnar að mestu leyti nálægt upprunalegu skiptilínunni við 38. breiddargráðuna.</p>
+        <p>Stríðið varð að kyrrstöðustríði með miklu mannfalli á báða bóga og friðarviðræður drógust á langinn.</p>
+
+        <hr>
+
+        <h2>// DEATH OF STALIN & SCIENTIFIC BREAKTHROUGHS //</h2>
+        <!-- Mynd af Stalín eða DNA-módelinu -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/DNA_double_helix_horizontal.png/320px-DNA_double_helix_horizontal.png" alt="Líkan af DNA sameindinni" class="content-image">
+        <p>Árið 1953 urðu stór tímamót þegar Jósef Stalín, einræðisherra Sovétríkjanna, lést í mars. Dauði hans leysti úr læðingi valdabaráttu innan Kremlar og hafði víðtæk áhrif á Kalda stríðið, þótt spennan myndi haldast áfram.</p>
+        <p>Sama ár náðu vísindamennirnir James Watson og Francis Crick, byggt á vinnu Rosalind Franklin og fleiri, að ráða byggingu DNA-sameindarinnar – tvöfalda helixins. Þessi uppgötvun gjörbylti líffræði og læknisfræði. Einnig árið 1953 tókst Sir Edmund Hillary frá Nýja-Sjálandi og Tenzing Norgay sherpa frá Nepal fyrstum manna að klífa tind Mount Everest, hæsta fjalls heims.</p>
+        <p><strong>Aðgangsspurning:</strong> Hvaða skammstöfun er notuð yfir erfðaefnið sem Watson og Crick réðu byggingu á árið 1953?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #22 (Víetnam / Algería):</strong></p>
+             <p class="info-code">11000011</p>
+             <p><em>(Geymdu þetta brot. Dien Bien Phu.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass23">> Skammstöfun erfðaefnis:</label>
+             <input type="text" id="pass23" name="pass23" autocapitalize="off">
+             <button id="submit23">Staðfesta</button>
+             <p id="error23" class="error-message" style="display: none;">// ÓÞEKKT SAMEIND //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Analyzing Genetic Code & Geopolitical Shifts...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit23').addEventListener('click', checkAnswer23);
+        document.getElementById('pass23').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer23();
+            }
+        });
+
+        function checkAnswer23() {
+            // Svarið er DNA
+            const correctAnswer = 'dna';
+            const userAnswer = document.getElementById('pass23').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error23');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '24_dna_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass23').value = '';
+                document.getElementById('pass23').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

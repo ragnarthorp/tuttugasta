@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Founded / End of an Era & Rise of PCs</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// A NEW BEGINNING: MICROSOFT & THE PC REVOLUTION //</h2>
+        <p>Stofnun Microsoft árið 1975 markaði upphaf mikilla breytinga í tölvuheiminum. Þótt fyrirtækið væri lítið í byrjun, átti hugbúnaður þess eftir að verða lykilatriði í þróun einkatölvunnar (PC).</p>
+        <p>Á sama tíma lauk Víetnamstríðinu með falli Saigon og hörmungar hófust í Kambódíu undir stjórn Rauðu khmeranna, sem sýnir hve ólíkir atburðir geta átt sér stað samtímis á ólíkum stöðum í heiminum.</p>
+
+        <hr>
+
+        <h2>// END OF THE MAO ERA & THE DAWN OF PERSONAL COMPUTING //</h2>
+        <!-- Mynd af Mao Zedong eða Apple II -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Apple_II_IMG_4212.jpg/320px-Apple_II_IMG_4212.jpg" alt="Apple II tölva" class="content-image">
+        <p>Árið 1976 lést Mao Zedong, leiðtogi Kína. Dauði hans batt í raun enda á Menningarbyltinguna og opnaði fyrir nýtt tímabil umbóta og efnahagslegra breytinga undir stjórn Deng Xiaoping síðar.</p>
+        <p>Í Suður-Afríku átti Soweto uppreisnin sér stað sama ár, þar sem þúsundir svartra skólanemenda mótmæltu aðskilnaðarstefnunni (apartheid) og voru kveðnir niður með ofbeldi, sem vakti alþjóðlega athygli á grimmd stjórnvalda.</p>
+        <p>Árið 1977 kom önnur byltingarkennd einkatölva fram á sjónarsviðið, Apple II, hönnuð af Steve Wozniak og markaðssett af Steve Jobs. Apple II var ein fyrsta fjöldaframleidda einkatölvan sem náði miklum vinsældum. Sama ár kom kvikmyndin Star Wars út og varð að menningarfyrirbæri og NASA sendi Voyager geimförin af stað í ferðalag sitt út í ystu myrkur sólkerfisins.</p>
+        <p><strong>Aðgangsspurning:</strong> Hvaða ár kom Apple II tölvan út?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #38 (Bylting / Kreppa):</strong></p>
+             <p class="info-code">01100100</p>
+             <p><em>(Geymdu þetta brot. Íran / Olíukreppa II / Sovét í Afganistan.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass39">> Útgáfuár Apple II:</label>
+             <input type="text" id="pass39" name="pass39" inputmode="numeric" pattern="[0-9]*">
+             <button id="submit39">Staðfesta</button>
+             <p id="error39" class="error-message" style="display: none;">// ÓÞEKKT TÖLVUKYNSLÓÐ //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Processing Technological & Political Transitions...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit39').addEventListener('click', checkAnswer39);
+        document.getElementById('pass39').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer39();
+            }
+        });
+
+        function checkAnswer39() {
+            // Svarið er 1977
+            const correctAnswer = '1977';
+            const userAnswer = document.getElementById('pass39').value.trim();
+            const errorMessage = document.getElementById('error39');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '40_apple_ii_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass39').value = '';
+                document.getElementById('pass39').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

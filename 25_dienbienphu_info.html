@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post-Indochina / Warsaw Pact & Suez Crisis</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// END OF AN ERA: FRENCH DEFEAT AT DIEN BIEN PHU //</h2>
+        <p>Ósigur Frakka við Dien Bien Phu árið 1954 markaði endalok franskra nýlenduyfirráða í Indókína. Genfarsamkomulagið skipti Víetnam tímabundið í tvennt við 17. breiddargráðu, með kommúnistastjórn í norðri og vestrænni stjórn í suðri. Þessi skipting og afskipti stórveldanna lögðu grunninn að hinu langvinna og mannskæða Víetnamstríði.</p>
+        <p>Á sama tíma og nýlenduveldin hörfuðu á sumum stöðum, harðnaði Kalda stríðið enn frekar í Evrópu.</p>
+
+        <hr>
+
+        <h2>// EASTERN BLOC CONSOLIDATES / CRISES IN SUEZ & HUNGARY //</h2>
+        <!-- Mynd tengd Varsjárbandalaginu eða uppreisninni í Ungverjalandi -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Bundesarchiv_Bild_183-42036-0001%2C_Budapest%2C_zerst%C3%B6rter_Panzer.jpg/320px-Bundesarchiv_Bild_183-42036-0001%2C_Budapest%2C_zerst%C3%B6rter_Panzer.jpg" alt="Skriðdreki eyðilagður í uppreisninni í Búdapest 1956" class="content-image">
+        <p>Til að bregðast við inngöngu Vestur-Þýskalands í NATO árið 1955, stofnuðu Sovétríkin og leppríki þeirra í Austur-Evrópu sitt eigið hernaðarbandalag, Varsjárbandalagið. Evrópa var nú formlega skipt í tvær andstæðar herbúðir.</p>
+        <p>Árið 1956 var viðburðaríkt. Í Egyptalandi þjóðnýtti Gamal Abdel Nasser Súesskurðinn, sem leiddi til Súesdeilunnar þar sem Bretland, Frakkland og Ísrael réðust á Egyptaland. Þeir neyddust þó til að hörfa vegna þrýstings frá Bandaríkjunum og Sovétríkjunum.</p>
+        <p>Í Ungverjalandi sama ár braust út uppreisn gegn sovéskum yfirráðum og kommúnistastjórninni í landinu. Sovéskir skriðdrekar voru sendir til Búdapest til að berja niður uppreisnina með harðri hendi, sem sýndi fram á hörku Sovétstjórnarinnar gagnvart hvers kyns andófi innan áhrifasvæðis síns.</p>
+        <p><strong>Aðgangsspurning:</strong> Í hvaða borg átti uppreisnin gegn sovéskum yfirráðum sér stað árið 1956?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #24 (Geimöldin):</strong></p>
+             <p class="info-code">01110010</p>
+             <p><em>(Geymdu þetta brot. Sputnik.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass25">> Uppreisnarhöfuðborg:</label>
+             <input type="text" id="pass25" name="pass25" autocapitalize="off">
+             <button id="submit25">Staðfesta</button>
+             <p id="error25" class="error-message" style="display: none;">// ÓÞEKKTUR ÓRÓASTAÐUR //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Monitoring Eastern Bloc Stability...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit25').addEventListener('click', checkAnswer25);
+        document.getElementById('pass25').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer25();
+            }
+        });
+
+        function checkAnswer25() {
+            // Svarið er Budapest
+            const correctAnswer = 'budapest';
+            const userAnswer = document.getElementById('pass25').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error25');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '26_budapest_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass25').value = '';
+                document.getElementById('pass25').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

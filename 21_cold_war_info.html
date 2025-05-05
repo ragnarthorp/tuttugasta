@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cold War Heats Up / Berlin & China</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// THE COLD WAR INTENSIFIES: ISRAEL & BERLIN //</h2>
+        <p>Heimurinn eftir Seinni heimsstyrjöldina var mótaður af Kalda stríðinu milli Bandaríkjanna og Sovétríkjanna. Árið 1948 var sérstaklega viðburðaríkt. Í maí var Ísraelsríki stofnað í Palestínu á grundvelli ályktunar Sameinuðu þjóðanna. Arabaríkin í kring réðust strax á hið nýja ríki og Fyrsta Arab-Ísraelska stríðið hófst.</p>
+        <p>Í Evrópu reyndu Sovétríkin að þvinga Vesturveldin burt úr Vestur-Berlín (sem var innikróuð í Austur-Þýskalandi) með því að loka öllum aðkomuleiðum á landi í júní 1948 (Berlínar-blokkunin). Vesturveldin brugðust við með gríðarlegri loftbrú (Berlínarloftbrúin) sem flutti vistir og nauðsynjar til borgarbúa í tæpt ár, þar til Sovétmenn gáfust upp og opnuðu leiðirnar aftur í maí 1949.</p>
+
+        <hr>
+
+        <h2>// NEW ALLIANCES & A SHIFT IN ASIA //</h2>
+        <!-- Mynd af NATO fána eða Mao Zedong -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Flag_of_NATO.svg/320px-Flag_of_NATO.svg.png" alt="Fáni NATO" class="content-image">
+        <p>Berlínardeilan hraðaði myndun formlegra hernaðarbandalaga. Í apríl 1949 stofnuðu Bandaríkin, Kanada og fjöldi Vestur-Evrópuríkja Atlantshafsbandalagið (NATO) til að tryggja gagnkvæmar varnir gegn hugsanlegri árás Sovétríkjanna.</p>
+        <p>Stórtíðindi urðu einnig í Asíu þegar kommúnistar undir forystu Mao Zedong sigruðu í Kínversku borgarastyrjöldinni og stofnuðu Alþýðulýðveldið Kína þann 1. október 1949. Þjóðernisstjórnin flúði til Taívan. Þetta breytti valdajafnvæginu í heiminum verulega. Sama ár sprengdu Sovétríkin sína fyrstu kjarnorkusprengju, mun fyrr en Vesturveldin höfðu búist við, og kjarnorkukapphlaupið var hafið.</p>
+        <p><strong>Aðgangsspurning:</strong> Hver er skammstöfunin á hernaðarbandalaginu sem Vesturveldin stofnuðu árið 1949?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #20 (Stríð / Bylting):</strong></p>
+             <p class="info-code">01100001</p>
+             <p><em>(Geymdu þetta brot. Kóreustríðið.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass21">> Skammstöfun bandalags:</label>
+             <input type="text" id="pass21" name="pass21" autocapitalize="off">
+             <button id="submit21">Staðfesta</button>
+             <p id="error21" class="error-message" style="display: none;">// ÓÞEKKT VARNARSKIPULAG //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Assessing Alliance Structures...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit21').addEventListener('click', checkAnswer21);
+        document.getElementById('pass21').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer21();
+            }
+        });
+
+        function checkAnswer21() {
+            // Svarið er NATO
+            const correctAnswer = 'nato';
+            const userAnswer = document.getElementById('pass21').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error21');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '22_nato_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass21').value = '';
+                document.getElementById('pass21').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

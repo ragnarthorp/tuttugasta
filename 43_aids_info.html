@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIDS Pandemic / Falklands & Star Wars</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// A NEW PANDEMIC EMERGES: THE AIDS CRISIS //</h2>
+        <p>Uppgötvun AIDS (Acquired Immunodeficiency Syndrome) árið 1981 markaði upphaf nýs og ógnvænlegs heimsfaraldurs. Í fyrstu var lítið vitað um sjúkdóminn, orsakir hans eða smitleiðir, sem olli miklum ótta og fordómum. Það átti eftir að taka vísindamenn nokkur ár að einangra HIV veiruna sem veldur AIDS og hefja þróun meðferða.</p>
+        <p>Á sama tíma héldu pólitísk átök áfram. Herlögin í Póllandi kúguðu Samstöðuhreyfinguna tímabundið og geimskutluáætlun Bandaríkjanna hélt áfram með fleiri flugferðum.</p>
+
+        <hr>
+
+        <h2>// COLD WAR TENSIONS & REGIONAL CONFLICTS: 1982-1983 //</h2>
+        <!-- Mynd af Falklandseyjastríðinu eða KAL 007 -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Argentine_soldiers_surrender_Stanley.jpg/320px-Argentine_soldiers_surrender_Stanley.jpg" alt="Argentínskir hermenn gefast upp í Falklandseyjastríðinu" class="content-image">
+        <p>Árið 1982 braust út Falklandseyjastríðið þegar Argentína réðst inn á hinar bresku Falklandseyjar. Bretland undir stjórn Margaret Thatcher brást hart við og sendi herflota sem náði að endurheimta eyjarnar eftir stutt en hörð átök.</p>
+        <p>Í Líbanon réðst Ísrael inn í landið sumarið 1982 til að hrekja hersveitir PLO (Frelsissamtaka Palestínu) burt. Innrásin leiddi til umsáturs um Beirút og Sabra og Shatila fjöldamorðanna. Í nóvember sama ár lést Leonid Brezhnev, leiðtogi Sovétríkjanna, og Yuri Andropov tók við.</p>
+        <p>Árið 1983 jókst spennan milli risaveldanna enn frekar. Í september skutu sovéskar herþotur niður suður-kóreska farþegaþotu, Korean Air Lines flug 007, sem hafði villst inn í sovéska lofthelgi, með þeim afleiðingum að allir 269 um borð fórust. Fyrr um árið hafði Ronald Reagan tilkynnt um áform um Strategic Defense Initiative (SDI), hátæknivarnarkerfi gegn kjarnorkuflaugum sem gagnrýnendur kölluðu "Star Wars" og óttuðust að myndi magna kjarnorkukapphlaupið.</p>
+        <p><strong>Aðgangsspurning:</strong> Hvaða tvö lönd börðust í Falklandseyjastríðinu árið 1982?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #42 (Hörmung / Umbætur):</strong></p>
+             <p class="info-code">01101101</p>
+             <p><em>(Geymdu þetta brot. Gorbatsjov / Live Aid.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass43">> Lönd í stríði (enska):</label>
+             <input type="text" id="pass43" name="pass43" autocapitalize="off">
+             <button id="submit43">Staðfesta</button>
+             <p id="error43" class="error-message" style="display: none;">// ÓÞEKKTIR STRÍÐSAÐILAR //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Analyzing Superpower Conflicts & Technological Arms Race...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit43').addEventListener('click', checkAnswer43);
+        document.getElementById('pass43').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer43();
+            }
+        });
+
+        function checkAnswer43() {
+            // Svarið er UK and Argentina eða Argentina and UK (eða Britain)
+            const answer1 = 'uk and argentina';
+            const answer2 = 'argentina and uk';
+            const answer3 = 'britain and argentina';
+            const answer4 = 'argentina and britain';
+            const userAnswer = document.getElementById('pass43').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error43');
+
+            if (userAnswer === answer1 || userAnswer === answer2 || userAnswer === answer3 || userAnswer === answer4) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '44_falklands_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass43').value = '';
+                document.getElementById('pass43').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

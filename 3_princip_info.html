@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gögn 1914 / Þraut Alpha-3</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// SKJÖL 1914: UPPHAF HEIMSSTYRJALDAR //</h2>
+        <p>Greining staðfest: Morðið á Franz Ferdinand erkihertoga í Sarajevó þann 28. júní 1914, framið af Gavrilo Princip, leysti úr læðingi keðjuverkun yfirlýsinga um stríð milli stórvelda Evrópu vegna flókinna hernaðarbandalaga.</p>
+        <p>Þetta markar upphaf Fyrri heimsstyrjaldarinnar (WWI), átaka sem áttu eftir að draga milljónir manna til dauða og umbreyta heiminum.</p>
+
+        <div class="info-box">
+            <p><strong>>> Gagnabrot #2:</strong></p>
+            <p class="info-code">10010110</p>
+            <p><em>(Geymdu þetta brot.)</em></p>
+        </div>
+        <hr>
+
+        <h2>// NÝ GÖGN ÞARF: FLANDERS FIELDS //</h2>
+        <p>Stríðið á vesturvígstöðvunum einkenndist af grimmilegum skotgrafahernaði. Milljónir féllu á stöðum eins og á engjum Flanders í Belgíu.</p>
+        <p>Á gröfum fallinna og sprengjugígum vígvallanna óx oft rauð blómategund sem varð síðar alþjóðlegt tákn til minningar um þá sem féllu í stríðinu, sérstaklega eftir frægt ljóð eftir John McCrae.</p>
+        <p><strong>Aðgangsspurning:</strong> Hvert er <strong>enska nafnið</strong> á þessu rauða minningarblómi?</p>
+
+        <div class="input-area">
+             <label for="pass3">> Blóm (enska):</label>
+             <input type="text" id="pass3" name="pass3">
+             <button id="submit3">Staðfesta</button>
+             <p id="error3" class="error-message" style="display: none;">// Ógild Aðgangsheimild //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Bíð eftir innslætti...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit3').addEventListener('click', checkAnswer3);
+        document.getElementById('pass3').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer3();
+            }
+        });
+
+        function checkAnswer3() {
+            const correctAnswer = 'poppy'; // Enskt nafn blómsins
+            const userAnswer = document.getElementById('pass3').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error3');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                // Við nefnum næstu síðu '4_poppy_info.html'
+                window.location.href = '4_poppy_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass3').value = '';
+                document.getElementById('pass3').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prague Spring Crushed / One Giant Leap for Mankind</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// THE END OF THE PRAGUE SPRING & A YEAR OF UNREST //</h2>
+        <p>Innrás Varsjárbandalagsins í Tékkóslóvakíu í ágúst 1968 batt enda á "Vorið í Prag" og sýndi enn og aftur fram á vilja Sovétríkjanna til að viðhalda stjórn sinni á Austur-Evrópu með hervaldi (Brezhnev-kenningin). Árið í heild sinni einkenndist af mótmælum og ólgu víða um heim, allt frá Víetnamstríðinu og borgararéttindabaráttu til stúdentauppreisna.</p>
+        <p>Morðin á Martin Luther King Jr. og Robert F. Kennedy settu einnig svip sinn á árið og höfðu djúpstæð áhrif á bandarískt samfélag.</p>
+
+        <hr>
+
+        <h2>// REACHING FOR THE STARS: THE MOON LANDING & THE INTERNET'S BIRTH //</h2>
+        <!-- Mynd af tungllendingu eða ARPANET skýringarmynd -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Aldrin_Apollo_11_original.jpg/260px-Aldrin_Apollo_11_original.jpg" alt="Buzz Aldrin á tunglinu, júlí 1969" class="content-image">
+        <p>Þrátt fyrir ólguna á jörðu niðri náði mannkynið nýjum hæðum í geimkönnun árið 1969. Þann 20. júlí lenti Apollo 11 geimfarið á tunglinu og Neil Armstrong varð fyrsti maðurinn til að stíga fæti á annan hnött, með hinum fleygu orðum: "That's one small step for [a] man, one giant leap for mankind." Milljónir manna fylgdust með þessum sögulega viðburði í sjónvarpi.</p>
+        <p>Sama ár, þó með mun minni fanfare, var annað tækniafrek unnið sem átti eftir að gjörbreyta heiminum: Fyrstu tengingarnar voru gerðar á ARPANET, rannsóknarneti bandaríska varnarmálaráðuneytisins. Þetta netverk varð síðar grunnurinn að internetinu eins og við þekkjum það í dag.</p>
+        <p><strong>Aðgangsspurning:</strong> Hvaða nafn bar geimflaugaáætlun Bandaríkjanna sem náði því markmiði að lenda mönnum á tunglinu?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #34 (Lok Beatles / Watergate):</strong></p>
+             <p class="info-code">00100000</p>
+             <p><em>(Geymdu þetta brot. Pong / Watergate innbrotið.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass35">> Nafn geimáætlunar:</label>
+             <input type="text" id="pass35" name="pass35" autocapitalize="off">
+             <button id="submit35">Staðfesta</button>
+             <p id="error35" class="error-message" style="display: none;">// ÓÞEKKT GEIMFERÐAÁÆTLUN //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Calculating Orbital Mechanics & Network Protocols...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit35').addEventListener('click', checkAnswer35);
+        document.getElementById('pass35').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer35();
+            }
+        });
+
+        function checkAnswer35() {
+            // Svarið er Apollo
+            const correctAnswer = 'apollo';
+            const userAnswer = document.getElementById('pass35').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error35');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '36_apollo_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass35').value = '';
+                document.getElementById('pass35').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

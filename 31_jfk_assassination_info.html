@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post-JFK / Civil Rights Act & Vietnam Escalation</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// A NATION MOURNS, A MOVEMENT MARCHES ON //</h2>
+        <p>Morðið á John F. Kennedy í nóvember 1963 skildi eftir sig djúp sár í bandarísku þjóðarsálinni. Lyndon B. Johnson tók við sem forseti og hét því að halda áfram stefnu Kennedys, sérstaklega í borgararéttindamálum.</p>
+        <p>Innblásin af baráttu hreyfingarinnar og marsinum á Washington undirritaði Johnson hin mikilvægu Borgararéttindalög (Civil Rights Act) árið 1964. Lögin bönnuðu mismunun á grundvelli kynþáttar, litarháttar, trúarbragða, kyns eða þjóðernisuppruna og voru stór áfangi í baráttunni fyrir jafnrétti.</p>
+
+        <hr>
+
+        <h2>// THE GULF OF TONKIN & BREZHNEV TAKES POWER //</h2>
+        <!-- Mynd af bandarískum hermönnum í Víetnam eða Brezhnev -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Leonid_Brezhnev_LIFE.jpg/240px-Leonid_Brezhnev_LIFE.jpg" alt="Leonid Brezhnev" class="content-image">
+        <p>Á sama tíma og baráttan fyrir borgararéttindum átti sér stað heima fyrir, jókst þátttaka Bandaríkjanna í Víetnamstríðinu. Í ágúst 1964 átti sér stað atvik í Tonkinflóa undan strönd Norður-Víetnam þar sem bandarísk herskip sögðust hafa orðið fyrir árás norður-víetnamskra báta (upplýsingar um seinni árásina eru umdeildar).</p>
+        <p>Þetta Tonkinflóa atvik notaði Johnson forseti til að fá samþykki Bandaríkjaþings fyrir Tonkinflóa ályktuninni, sem veitti honum víðtækar heimildir til að beita hervaldi í Suðaustur-Asíu án formlegrar stríðsyfirlýsingar. Þetta markaði upphafið að stóraukinni þátttöku Bandaríkjanna í Víetnamstríðinu.</p>
+        <p>Í Sovétríkjunum var Nikita Krústsjov bolað frá völdum í október 1964 og Leonid Brezhnev tók við sem leiðtogi Kommúnistaflokksins, embætti sem hann gegndi næstu 18 árin.</p>
+        <p><strong>Aðgangsspurning:</strong> Við hvaða flóa (á ensku) átti atvikið sér stað sem leiddi til aukinnar þátttöku Bandaríkjanna í Víetnam?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #30 (Menningarbylting):</strong></p>
+             <p class="info-code">01100111 00100000</p>
+             <p><em>(Geymdu þetta brot. Menningarbyltingin í Kína hefst.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass31">> Flói (enska):</label>
+             <input type="text" id="pass31" name="pass31" autocapitalize="off">
+             <button id="submit31">Staðfesta</button>
+             <p id="error31" class="error-message" style="display: none;">// ÓÞEKKT SJÁVARSVÆÐI //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Escalating Conflict Parameters...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit31').addEventListener('click', checkAnswer31);
+        document.getElementById('pass31').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer31();
+            }
+        });
+
+        function checkAnswer31() {
+            // Svarið er Tonkin
+            const correctAnswer = 'tonkin';
+            const userAnswer = document.getElementById('pass31').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error31');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '32_tonkin_gulf_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass31').value = '';
+                document.getElementById('pass31').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

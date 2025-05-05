@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fall of the Wall / End of the Soviet Union</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// THE WALL CRUMBLES & A NEW EUROPE EMERGES //</h2>
+        <p>Fall Berlínarmúrsins í nóvember 1989 var ekki aðeins táknrænn viðburður heldur leysti hann úr læðingi atburðarás sem leiddi til endaloka Kalda stríðsins. Byltingar áttu sér stað víðsvegar um Austur-Evrópu þar sem kommúnistastjórnir féllu ein af annarri (oftast friðsamlega, að Rúmeníu undanskilinni).</p>
+        <p>Árið 1990 var Nelson Mandela, leiðtogi baráttunnar gegn aðskilnaðarstefnunni, loksins látinn laus úr fangelsi í Suður-Afríku eftir 27 ára fangavist. Sama ár sameinaðist Þýskaland formlega á ný.</p>
+
+        <hr>
+
+        <h2>// THE GULF WAR & THE COLLAPSE OF THE SOVIET UNION //</h2>
+        <!-- Mynd af Gorbatsjov að segja af sér eða fána Sovétríkjanna lækkaðan -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Soviet_Union_map.svg/320px-Soviet_Union_map.svg.png" alt="Kort af Sovétríkjunum" class="content-image" style="filter: grayscale(1);">
+        <p>Árið 1990 réðst Írak undir stjórn Saddam Hussein inn í Kúveit. Sameinuðu þjóðirnar fordæmdu innrásina og í ársbyrjun 1991 hóf fjölþjóðlegt herlið undir forystu Bandaríkjanna (Operation Desert Storm) hernaðaraðgerðir til að frelsa Kúveit. Fyrsta Persaflóastríðinu lauk með sigri bandamanna og brotthvarfi Íraka frá Kúveit.</p>
+        <p>Á meðan héldu Sovétríkin áfram að veikjast innan frá. Umbætur Gorbatsjovs höfðu leyst úr læðingi þjóðerniskennd og sjálfstæðisþrá meðal aðildarlýðvelda. Í ágúst 1991 gerðu harðlínumenn innan Kommúnistaflokksins misheppnaða valdaránstilraun gegn Gorbatsjov. Þetta hraðaði upplausninni.</p>
+        <p>Í desember 1991 lýstu flest Sovétlýðveldin yfir sjálfstæði og þann 26. desember 1991 voru Sovétríkin formlega leyst upp. Kalda stríðinu var endanlega lokið.</p>
+        <p><strong>Aðgangsspurning:</strong> Hvaða ár voru Sovétríkin formlega leyst upp?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #47 (Ný öld?):</strong></p>
+             <p class="info-code">00110010 00110000 </p>
+             <p><em>(Geymdu þetta brot. Þúsaldamót.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass48">> Upplausnarár Sovétr.:</label>
+             <input type="text" id="pass48" name="pass48" inputmode="numeric" pattern="[0-9]*">
+             <button id="submit48">Staðfesta</button>
+             <p id="error48" class="error-message" style="display: none;">// ÓGILD SÖGULEG TÍMALÍNA //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// System Reboot... Cold War Protocols Terminated...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit48').addEventListener('click', checkAnswer48);
+        document.getElementById('pass48').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer48();
+            }
+        });
+
+        function checkAnswer48() {
+            // Svarið er 1991
+            const correctAnswer = '1991';
+            const userAnswer = document.getElementById('pass48').value.trim();
+            const errorMessage = document.getElementById('error48');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '49_soviet_collapse_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass48').value = '';
+                document.getElementById('pass48').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

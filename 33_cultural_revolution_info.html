@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Revolution / Six-Day War & Summer of Love</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// UPHEAVAL IN CHINA: THE CULTURAL REVOLUTION //</h2>
+        <p>Menningarbyltingin sem Mao Zedong hóf í Kína árið 1966 leysti úr læðingi mikla ringulreið. Ungir Rauðliðar (Red Guards) réðust gegn meintum "gagnbyltingarsinnum", kennurum, menntamönnum og jafnvel flokksleiðtogum. Forn menningararfur var eyðilagður og efnahagslíf landsins beið mikinn skaða.</p>
+        <p>Þótt markmiðið hafi verið sagt vera að styrkja byltinguna, er Menningarbyltingin nú talin hafa verið hörmulegur tími í sögu Kína sem kostaði milljónir manna lífið eða olli þeim miklum þjáningum.</p>
+
+        <hr>
+
+        <h2>// CONFLICT & COUNTERCULTURE: 1967 //</h2>
+        <!-- Mynd af ísraelskum hermönnum eða hippum -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Six_Day_War_Tank.jpg/320px-Six_Day_War_Tank.jpg" alt="Ísraelskir skriðdrekar í Sex daga stríðinu" class="content-image">
+        <p>Árið 1967 jókst spennan í Mið-Austurlöndum til muna. Í júní gerði Ísrael fyrirbyggjandi árás á Egyptaland, Sýrland og Jórdaníu í Sex daga stríðinu. Á aðeins sex dögum vann Ísrael afgerandi hernaðarsigur og hertók Sínaí-skagann, Gasasvæðið, Vesturbakkann (þar á meðal Austur-Jerúsalem) og Gólanhæðir. Þessi átök og hernám svæðanna móta enn átökin fyrir botni Miðjarðarhafs.</p>
+        <p>Á sama tíma var mikil gerjun í vestrænum samfélögum. Sumarið 1967 er oft kallað "Summer of Love", sérstaklega tengt Haight-Ashbury hverfinu í San Francisco, þar sem þúsundir ungs fólks (hippar) komu saman til að mótmæla stríði, fagna ást, friði og nýjum lífsstíl, oft undir áhrifum rokktónlistar og vímuefna.</p>
+        <p><strong>Aðgangsspurning:</strong> Hvað kallaðist stríðið sem Ísrael háði og sigraði í á aðeins sex dögum árið 1967?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #32 (Ólga / Morð):</strong></p>
+             <p class="info-code">01100001</p>
+             <p><em>(Geymdu þetta brot. Prag / Tet / MLK & RFK morð.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass33">> Nafn stríðs:</label>
+             <input type="text" id="pass33" name="pass33" autocapitalize="off">
+             <button id="submit33">Staðfesta</button>
+             <p id="error33" class="error-message" style="display: none;">// ÓÞEKKT HERNAÐARAÐGERÐ //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Analyzing Middle East Conflicts & Counterculture Movements...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit33').addEventListener('click', checkAnswer33);
+        document.getElementById('pass33').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer33();
+            }
+        });
+
+        function checkAnswer33() {
+            // Svarið er Six-Day War (eða afbrigði)
+            const correctAnswer1 = 'six-day war';
+            const correctAnswer2 = 'six day war';
+            const userAnswer = document.getElementById('pass33').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error33');
+
+            if (userAnswer === correctAnswer1 || userAnswer === correctAnswer2) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '34_six_day_war_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass33').value = '';
+                document.getElementById('pass33').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flugafrek / Uppgangur 1921</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// SIGUR Í LOFTI: FYRSTA ATLANTSHAFSFLUGIÐ 1919 //</h2>
+        <!-- Mynd af Vickers Vimy flugvélinni -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Vickers_Vimy_Aircraft_G-EAOU.jpg/320px-Vickers_Vimy_Aircraft_G-EAOU.jpg" alt="Vickers Vimy flugvél Alcock og Brown" class="content-image">
+        <p>Afrek Alcock og Brown árið 1919, þegar þeir flugu Vickers Vimy tvíþekju sinni yfir Atlantshafið án millilendingar, markaði upphaf nýs kafla í samgöngusögunni. Þrátt fyrir hættur og erfiðleika sýndi þetta fram á möguleika flugvélarinnar til langflugs.</p>
+        <p>Heimurinn var að minnka og tæknin tók stökk fram á við á árunum eftir Fyrri heimsstyrjöldina, oft kallað "Roaring Twenties".</p>
+
+        <hr>
+
+        <h2>// NÝJAR HREYFINGAR: ÞÝSKALAND 1921 //</h2>
+        <p>Á sama tíma og tæknin þróaðist, kraumuðu pólitískar hreyfingar í Evrópu, margar sprottnar úr óánægju og ringulreið eftir stríðið. Í Þýskalandi var mikil ólga.</p>
+        <p>Árið 1921 varð Adolf Hitler, þá lítt þekktur stjórnmálamaður, formaður lítils öfgaflokks sem átti eftir að hafa skelfileg áhrif á heimssöguna.</p>
+        <p><strong>Aðgangsspurning:</strong> Hver var hin opinbera þýska skammstöfun fyrir þennan flokk (Þjóðernissósíalíska þýska verkamannaflokkinn)?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #5 (Leiðtogaval):</strong></p>
+             <p class="info-code">00100000 11000011 </p>
+             <p><em>(Geymdu þetta brot.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass6">> Skammstöfun flokks:</label>
+             <input type="text" id="pass6" name="pass6" autocapitalize="off"> <!-- Slökkva á sjálfvirku hástafasetningu -->
+             <button id="submit6">Staðfesta</button>
+             <p id="error6" class="error-message" style="display: none;">// ÓGILD FLOKKSAUÐKENNI //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Pólitísk Greining...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit6').addEventListener('click', checkAnswer6);
+        document.getElementById('pass6').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer6();
+            }
+        });
+
+        function checkAnswer6() {
+            const correctAnswer = 'nsdap'; // Skammstöfunin með lágstöfum
+            // Notandi gæti skrifað NSDAP, nsdap, Nsdap o.s.frv.
+            const userAnswer = document.getElementById('pass6').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error6');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                // Við nefnum næstu síðu '7_nsdap_info.html'
+                window.location.href = '7_nsdap_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass6').value = '';
+                document.getElementById('pass6').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

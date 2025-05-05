@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INF Treaty / End of Wars & Fall of the Berlin Wall</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// A THAW IN THE COLD WAR: THE INF TREATY & INTIFADA //</h2>
+        <p>Undirritun INF-samningsins árið 1987 var mikilvægur áfangi sem sýndi að raunverulegur árangur gæti náðst í afvopnunarviðræðum milli Bandaríkjanna og Sovétríkjanna undir stjórn Reagans og Gorbatsjovs. Þetta jók vonir um frekari samninga og endalok Kalda stríðsins.</p>
+        <p>Hins vegar sýndi upphaf Fyrstu Intifada Palestínumanna sama ár að gömul átök voru enn óleyst og gátu blossað upp af krafti.</p>
+
+        <hr>
+
+        <h2>// 1988-1989: END OF CONFLICTS & THE CRUMBLING OF THE IRON CURTAIN //</h2>
+        <!-- Mynd af falli Berlínarmúrsins -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Bundesarchiv_Bild_183-1989-1110-449%2C_Berlin%2C_Fall_der_Mauer%2C_Grenzsoldaten.jpg/320px-Bundesarchiv_Bild_183-1989-1110-449%2C_Berlin%2C_Fall_der_Mauer%2C_Grenzsoldaten.jpg" alt="Fólk klifrar á Berlínarmúrnum við Brandenborgarhliðið 1989" class="content-image">
+        <p>Árið 1988 lauk loksins hinu blóðuga Íran-Írak stríði eftir átta ára átök. Í febrúar 1989 hurfu síðustu sovésku hermennirnir frá Afganistan eftir nærri áratugs misheppnað stríð sem hafði kostað mikið blóð og fjármuni.</p>
+        <p>Um vorið 1989 hófust mikil mótmæli stúdenta og almennings fyrir auknu lýðræði í Kína, sem náðu hápunkti á Torgi hins himneska friðar í Beijing. Þann 4. júní voru mótmælin hins vegar barin niður af hernum með miklu mannfalli (Tiananmen Square Massacre), sem vakti hörð viðbrögð um allan heim.</p>
+        <p>Þrátt fyrir atburðina í Kína héldu umbætur og frelsisbylgja áfram í Austur-Evrópu. Hápunktinum var náð þann 9. nóvember 1989 þegar yfirvöld í Austur-Þýskalandi tilkynntu óvænt að borgarar mættu ferðast til vesturs. Gríðarlegur mannfjöldi safnaðist saman við Berlínarmúrinn og fór að rífa hann niður. Fall Berlínarmúrsins varð táknmynd endaloka Kalda stríðsins og Járntjaldsins.</p>
+        <p><strong>Aðgangsspurning:</strong> Á hvaða torgi í Beijing fóru fram mótmæli fyrir lýðræði sem voru barin niður af hernum árið 1989?</p>
+        <p style="text-align: center;">Torg hins himneska ______.</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #46 (Endalok / Sameining):</strong></p>
+             <p class="info-code">00100000</p>
+             <p><em>(Geymdu þetta brot. Hrun Sovétríkjanna.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass47">> Nafn torgs (ísl.):</label>
+             <input type="text" id="pass47" name="pass47" autocapitalize="off">
+             <button id="submit47">Staðfesta</button>
+             <p id="error47" class="error-message" style="display: none;">// ÓÞEKKTUR MÓTMÆLASTAÐUR //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Deconstructing Ideological Barriers...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit47').addEventListener('click', checkAnswer47);
+        document.getElementById('pass47').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer47();
+            }
+        });
+
+        function checkAnswer47() {
+            // Svarið er friðar
+            const correctAnswer = 'friðar';
+            const userAnswer = document.getElementById('pass47').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error47');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '48_berlin_wall_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass47').value = '';
+                document.getElementById('pass47').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stalingrad Victory / Allies Invade Italy</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// VENDIPUNKTUR Á AUSTURVÍGSTÖÐVUNUM: SIGUR Í STALÍNGRAD //</h2>
+        <!-- Mynd af rústum Stalíngrad eða sovéskum hermönnum -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Bundesarchiv_Bild_183-W0516-312%2C_Russland%2C_Kampf_um_Stalingrad%2C_Stra%C3%9Fenkampf.jpg/320px-Bundesarchiv_Bild_183-W0516-312%2C_Russland%2C_Kampf_um_Stalingrad%2C_Stra%C3%9Fenkampf.jpg" alt="Sovéskir hermenn í götubardaga í Stalíngrad" class="content-image">
+        <p>Orrustunni um Stalíngrad lauk í febrúar 1943 með algjörum sigri Sovétmanna og uppgjöf þýska 6. hersins undir stjórn Friedrich Paulus hershöfðingja. Þetta var gríðarlegt áfall fyrir Þjóðverja, bæði hernaðarlega og sálfræðilega, og markaði upphafið að stöðugri undanhaldssókn þeirra á austurvígstöðvunum.</p>
+        <p>Um sumarið reyndu Þjóðverjar síðustu stóru sókn sína í austri í Orrustunni við Kursk, stærstu skriðdrekaorrustu sögunnar, en biðu ósigur.</p>
+
+        <hr>
+
+        <h2>// BANDAMENN OPNA NÝJAR VÍGSTÖÐVAR: ÍTALÍA OG TEHERAN //</h2>
+        <p>Eftir sigurinn í Norður-Afríku hófu Bandamenn (aðallega Bandaríkjamenn og Bretar) innrás á Sikiley í júlí 1943 og síðan á meginland Ítalíu í september. Þetta leiddi til falls Benito Mussolini og uppgjafar Ítalíu, þótt þýskar hersveitir héldu áfram að berjast harðri baráttu á Ítalíuskaganum.</p>
+        <p>Í nóvember-desember hittust leiðtogar Bandamanna – Roosevelt (Bandaríkin), Churchill (Bretland) og Stalín (Sovétríkin) – á Teheran ráðstefnunni í Íran. Þar samþykktu þeir meginlínur í hernaðaráætlunum sínum, þar á meðal ákvörðun um að opna nýjar vígstöðvar í Vestur-Evrópu árið eftir.</p>
+        <p><strong>Aðgangsspurning:</strong> Hvaða ár var innrás Bandamanna á Sikiley og meginland Ítalíu gerð?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #15 (Opnun Vesturvígst.):</strong></p>
+             <p class="info-code">01110011 01110100</p>
+             <p><em>(Geymdu þetta brot.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass16">> Innrásarár Ítalíu:</label>
+             <input type="text" id="pass16" name="pass16" inputmode="numeric" pattern="[0-9]*">
+             <button id="submit16">Staðfesta</button>
+             <p id="error16" class="error-message" style="display: none;">// ÓGILD TÍMALÍNA //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Synchronizing Allied Strategy...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit16').addEventListener('click', checkAnswer16);
+        document.getElementById('pass16').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer16();
+            }
+        });
+
+        function checkAnswer16() {
+            // Svarið er 1943
+            const correctAnswer = '1943';
+            const userAnswer = document.getElementById('pass16').value.trim();
+            const errorMessage = document.getElementById('error16');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '17_italy_invasion_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass16').value = '';
+                document.getElementById('pass16').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

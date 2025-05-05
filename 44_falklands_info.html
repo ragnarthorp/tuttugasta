@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falklands Aftermath / Famine & Gorbachev</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// POST-FALKLANDS TENSIONS & THE "SECOND COLD WAR" //</h2>
+        <p>Sigur Breta í Falklandseyjastríðinu 1982 styrkti stöðu Margaret Thatcher heima fyrir. Átökin, ásamt niðurskotinu á KAL 007 og SDI/"Star Wars" áætlun Reagans árið 1983, juku á spennuna í Kalda stríðinu, sem sumir sagnfræðingar kalla "Seinna Kalda stríðið". Óttinn við kjarnorkuátök var enn áþreifanlegur.</p>
+        <p>Íran-Írak stríðið hélt áfram að valda gríðarlegri eyðileggingu og mannfalli í Mið-Austurlöndum.</p>
+
+        <hr>
+
+        <h2>// FAMINE, ASSASSINATION & A NEW SOVIET LEADER: 1984-1985 //</h2>
+        <!-- Mynd tengd hungursneyðinni í Eþíópíu, Gorbatsjov eða Live Aid -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Gorbachev_1987.jpg/250px-Gorbachev_1987.jpg" alt="Mikhail Gorbachev" class="content-image">
+        <p>Árin 1983-1985 varð skelfileg hungursneyð í Eþíópíu, sem vakti heimsathygli og samúð. Í október 1984 var Indira Gandhi, forsætisráðherra Indlands, myrt af lífvörðum sínum úr röðum Síkha, sem leiddi til mikilla óeirða og ofbeldis gegn Síkhum á Indlandi.</p>
+        <p>Í mars 1985 kom nýr og mun yngri leiðtogi til valda í Sovétríkjunum, Mikhail Gorbachev. Hann hóf fljótlega stefnu umbóta innan Sovétríkjanna, þekkt sem "Perestroika" (endurskipulagning) og "Glasnost" (opnun), sem átti eftir að hafa gríðarleg áhrif á Kalda stríðið og framtíð Sovétríkjanna sjálfra.</p>
+        <p>Til að bregðast við hungursneyðinni í Eþíópíu voru haldnir risastórir góðgerðartónleikar samtímis í London og Fíladelfíu (og víðar) sumarið 1985, þar sem margar af stærstu stjörnum tónlistarheimsins komu fram til að safna fé.</p>
+        <p>Sama ár fannst flak farþegaskipsins Titanic á botni Atlantshafsins, 73 árum eftir að það sökk.</p>
+        <p><strong>Aðgangsspurning:</strong> Hvað hétu hinir alþjóðlegu góðgerðartónleikar sem haldnir voru 1985 til styrktar hungruðum í Eþíópíu?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #43 (Hörmungar):</strong></p>
+             <p class="info-code">01100010</p>
+             <p><em>(Geymdu þetta brot. Chernobyl / Challenger.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass44">> Nafn tónleika:</label>
+             <input type="text" id="pass44" name="pass44" autocapitalize="off">
+             <button id="submit44">Staðfesta</button>
+             <p id="error44" class="error-message" style="display: none;">// ÓÞEKKTUR TÓNLISTARVIÐBURÐUR //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Processing Global Humanitarian Efforts & Political Reforms...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit44').addEventListener('click', checkAnswer44);
+        document.getElementById('pass44').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer44();
+            }
+        });
+
+        function checkAnswer44() {
+            // Svarið er Live Aid
+            const correctAnswer = 'live aid';
+            const userAnswer = document.getElementById('pass44').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error44');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '45_gorbachev_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass44').value = '';
+                document.getElementById('pass44').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

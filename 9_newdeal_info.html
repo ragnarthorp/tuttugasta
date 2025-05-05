@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Deal / Ógnvænleg Teikn</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// GREINING: NEW DEAL Í BANDARÍKJUNUM //</h2>
+        <!-- Mynd af WPA verkefni -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/WPA_Poster_-_Work_pays_America%21_Prosperity.jpg/250px-WPA_Poster_-_Work_pays_America%21_Prosperity.jpg" alt="Plakat fyrir Works Progress Administration (WPA)" class="content-image">
+        <p>"New Deal" áætlun Roosevelts forseta fól í sér fjölmörg verkefni til að skapa atvinnu, umbætur í bankakerfinu og félagslegar aðstoðaráætlanir eins og Social Security. Þótt hún hafi ekki bundið enda á kreppuna að fullu, mildaði hún áhrifin og endurmótaði samband ríkis og borgara í Bandaríkjunum.</p>
+        <p>Á sama tíma héldu átök áfram annars staðar. Chaco-stríðinu milli Bólivíu og Paragvæ lauk 1935 og sama ár voru hin alræmdu Nuremberg-kynþáttalög sett í Þýskalandi, sem sviptu gyðinga grundvallarréttindum.</p>
+
+        <hr>
+
+        <h2>// FORLEIKUR AÐ STÓRÁTÖKUM: BERLÍN 1936 //</h2>
+        <p>Árið 1936 var Adolf Hitler búinn að festa sig í sessi sem einræðisherra (Führer) Þýskalands eftir dauða Hindenburg forseta 1934 og hreinsanirnar í "Nótt hinna löngu hnífa". Sama ár braust Spænska borgarastyrjöldin út, átök sem urðu að æfingasvæði fyrir heri Þýskalands og Ítalíu.</p>
+        <p>Sumarólympíuleikarnir voru haldnir í Berlín 1936 og Nasistastjórnin notaði þá óspart í áróðursskyni til að sýna fram á yfirburði aríska kynstofnsins. Þeim áformum var hins vegar storkað af afrekum erlendra íþróttamanna.</p>
+        <p><strong>Aðgangsspurning:</strong> Hvað hét hinn bandaríski svarti frjálsíþróttamaður sem vann fjögur gullverðlaun á Ólympíuleikunum í Berlín 1936 og hrakti þar með kynþáttakenningar nasista?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #8 (Olympíuár):</strong></p>
+             <p class="info-code">1936</p>
+             <p><em>(Geymdu þetta brot. Berlín / Spánn.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass9">> Nafn íþróttamanns:</label>
+             <input type="text" id="pass9" name="pass9" autocapitalize="off">
+             <button id="submit9">Staðfesta</button>
+             <p id="error9" class="error-message" style="display: none;">// ÓÞEKKTUR KEPPENDI //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Greini Íþróttaafrek...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit9').addEventListener('click', checkAnswer9);
+        document.getElementById('pass9').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer9();
+            }
+        });
+
+        function checkAnswer9() {
+            // Svarið er "Jesse Owens"
+            const correctAnswer = 'jesse owens';
+            const userAnswer = document.getElementById('pass9').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error9');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '10_owens_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass9').value = '';
+                document.getElementById('pass9').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fall of France / Battle of Britain</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// BLITZKRIEG CONTINUES: WESTERN EUROPE FALLS //</h2>
+        <!-- Mynd af þýskum hermönnum í París -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Bundesarchiv_Bild_146-1975-041-03A%2C_Paris%2C_deutsche_Truppen_am_Arc_de_Triomphe.jpg/320px-Bundesarchiv_Bild_146-1975-041-03A%2C_Paris%2C_deutsche_Truppen_am_Arc_de_Triomphe.jpg" alt="Þýskar hersveitir við Sigurbogann í París 1940" class="content-image">
+        <p>Eftir sigurinn í Póllandi beittu Þjóðverjar "Blitzkrieg" aðferðinni af fullum þunga í Vestur-Evrópu vorið 1940. Danmörk og Noregur féllu fljótt. Í maí réðust þeir inn í Niðurlönd, Belgíu, Lúxemborg og Frakkland.</p>
+        <p>Bandamenn voru yfirbugaðir. Hundruð þúsunda breskra og franskra hermanna voru umkringdir við Dunkirk en tókst á ótrúlegan hátt að bjarga flestum yfir Ermarsundið í "Operation Dynamo". Frakkland gafst hins vegar upp í júní 1940.</p>
+
+        <hr>
+
+        <h2>// BRITAIN STANDS ALONE: THE BATTLE OF BRITAIN //</h2>
+        <p>Eftir fall Frakklands stóð Bretland eitt eftir gegn Þýskalandi. Winston Churchill var orðinn forsætisráðherra og hét þjóð sinni "blóði, striti, tárum og svita".</p>
+        <p>Til að undirbúa innrás í Bretland þurfti þýski flugherinn (Luftwaffe) að ná yfirráðum í lofti. Sumarið og haustið 1940 geisaði Orrustan um Bretland þar sem Konunglegi breski flugherinn (RAF) barðist hetjulega gegn árásum Luftwaffe og kom að lokum í veg fyrir innrásina.</p>
+        <p><strong>Aðgangsspurning:</strong> Hvert var kóðanafnið (á ensku) á hinni fyrirhuguðu en aldrei framkvæmdu innrás Þjóðverja í Bretland?</p>
+        <p style="text-align: center;">Operation _ _ _ / _ _ _ _</p> <!-- Vísbending: Tveggja orða nafn -->
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #12 (Wendepunkt):</strong></p>
+             <p class="info-code">00100000 01101000</p>
+             <p><em>(Geymdu þetta brot.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass13">> Innrásarkóði (enska):</label>
+             <input type="text" id="pass13" name="pass13" autocapitalize="off">
+             <button id="submit13">Staðfesta</button>
+             <p id="error13" class="error-message" style="display: none;">// ÓGILT INNRÁSARKERFI //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Analyzing Air Superiority Data...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit13').addEventListener('click', checkAnswer13);
+        document.getElementById('pass13').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer13();
+            }
+        });
+
+        function checkAnswer13() {
+            // Svarið er "Sea Lion"
+            const correctAnswer = 'sea lion';
+            const userAnswer = document.getElementById('pass13').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error13');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '14_battle_of_britain_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass13').value = '';
+                document.getElementById('pass13').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

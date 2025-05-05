@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post-War World / Cold War Begins</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// AFTERMATH OF GLOBAL CONFLICT: A NEW WORLD ORDER //</h2>
+        <p>Seinni heimsstyrjöldinni lauk formlega með uppgjöf Japans í september 1945. Afleiðingarnar voru skelfilegar: Talið er að á bilinu 50 til 85 milljónir manna hafi látið lífið, borgir og lönd lágu í rústum og milljónir manna voru á vergangi.</p>
+        <p>Til að koma í veg fyrir slíka hörmung í framtíðinni og stuðla að friði og alþjóðasamvinnu voru Sameinuðu þjóðirnar (UN - United Nations) stofnaðar formlega í október 1945, byggt á grunni sem lagður var á Yalta og Potsdam ráðstefnunum. Nuremberg réttarhöldin hófust einnig þar sem leiðtogar Nasista voru sóttir til saka fyrir stríðsglæpi.</p>
+
+        <hr>
+
+        <h2>// THE IRON CURTAIN DESCENDS: THE COLD WAR BEGINS //</h2>
+        <!-- Mynd tengd Kalda Stríðinu, t.d. kort af skiptri Evrópu eða Berlínarmúrnum (þó hann komi síðar) -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Map_Europe_alliance_1949-1989.png/320px-Map_Europe_alliance_1949-1989.png" alt="Kort af skiptri Evrópu í Kalda Stríðinu" class="content-image">
+        <p>Þrátt fyrir stofnun SÞ varð fljótt ljóst að nýr ágreiningur var að myndast milli fyrrum bandamanna: lýðræðisríkja Vesturveldanna undir forystu Bandaríkjanna og kommúnistaríkja Austur-Evrópu undir forystu Sovétríkjanna. Hugmyndafræðilegur ágreiningur, gagnkvæmt vantraust og valdabarátta leiddu til Kalda stríðsins.</p>
+        <p>Winston Churchill lýsti ástandinu svo í frægri ræðu árið 1946 að "járntjald" hefði fallið niður í gegnum Evrópu og skipt álfunni í tvennt. Til að aðstoða við enduruppbyggingu Vestur-Evrópu og sporna gegn útbreiðslu kommúnisma kynntu Bandaríkin Marshall-aðstoðina árið 1948.</p>
+        <p><strong>Aðgangsspurning:</strong> Hvaða tveggja orða hugtak (á ensku) notaði Churchill til að lýsa skiptingunni milli Austur- og Vestur-Evrópu?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #19 (Skipting):</strong></p>
+             <p class="info-code">01101010</p>
+             <p><em>(Geymdu þetta brot. Marshall / Berlín / Ísrael.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass20">> Hugtak Churchills:</label>
+             <input type="text" id="pass20" name="pass20" autocapitalize="off">
+             <button id="submit20">Staðfesta</button>
+             <p id="error20" class="error-message" style="display: none;">// ÓGILT PÓLITÍSKT LANDSLAG //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Analyzing Geopolitical Division...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit20').addEventListener('click', checkAnswer20);
+        document.getElementById('pass20').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer20();
+            }
+        });
+
+        function checkAnswer20() {
+            // Svarið er Iron Curtain
+            const correctAnswer = 'iron curtain';
+            const userAnswer = document.getElementById('pass20').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error20');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '21_cold_war_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass20').value = '';
+                document.getElementById('pass20').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

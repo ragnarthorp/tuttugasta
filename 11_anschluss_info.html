@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appeasement Fails / WWII Begins</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tengir við sama stílskjal -->
+</head>
+<body>
+    <div class="content-box">
+        <h2>// AFTERMATH: ANSCHLUSS & MUNICH AGREEMENT //</h2>
+        <!-- Mynd af Chamberlain eftir München -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Neville_Chamberlain_holding_Anglo-German_Declaration.jpg/300px-Neville_Chamberlain_holding_Anglo-German_Declaration.jpg" alt="Neville Chamberlain eftir Münchenarsamkomulagið" class="content-image">
+        <p>Eftir innlimun Austurríkis (Anschluss) árið 1938 hélt Hitler áfram útþenslustefnu sinni. Seinna sama ár var Münchenarsamkomulagið undirritað, þar sem Bretland og Frakkland samþykktu að láta Súdetahéruð Tékkóslóvakíu af hendi til Þýskalands í von um að friðþægja Hitler og koma í veg fyrir stríð.</p>
+        <p>Þessi stefna ("appeasement") reyndist skammvinn og mistókst hrapallega þegar Þýskaland hertók restina af Tékkóslóvakíu aðeins nokkrum mánuðum síðar.</p>
+
+        <hr>
+
+        <h2>// FINAL STEPS TO WAR: PACT & INVASION //</h2>
+        <p>Sumarið 1939 kom heimurinn á óvart þegar Þýskaland og Sovétríkin, sem voru erkifjendur í hugmyndafræði, undirrituðu griðarsáttmála (Molotov–Ribbentrop Pact). Sáttmálinn innihélt leynilegan viðauka um skiptingu Póllands og annarra svæða í Austur-Evrópu milli ríkjanna.</p>
+        <p>Með þessu samkomulagi tryggði Hitler sér að Sovétríkin myndu ekki grípa inn í og þann 1. september 1939 réðust þýskar hersveitir inn í Pólland.</p>
+        <p><strong>Aðgangsspurning:</strong> Innrásin í hvaða land þann 1. september 1939 varð til þess að Bretland og Frakkland lýstu yfir stríði á hendur Þýskalandi og hófu þannig Seinni heimsstyrjöldina í Evrópu?</p>
+
+        <div class="info-box" style="margin-top: 30px; border-style: solid;">
+             <p><strong>>> Gagnabrot #10 (Stríðsbyrjun Evr.):</strong></p>
+             <p class="info-code">01101110</p>
+             <p><em>(Geymdu þetta brot.)</em></p>
+        </div>
+
+        <div class="input-area">
+             <label for="pass11">> Innrásarland:</label>
+             <input type="text" id="pass11" name="pass11" autocapitalize="off">
+             <button id="submit11">Staðfesta</button>
+             <p id="error11" class="error-message" style="display: none;">// ÓGILD HERSVÆÐI //</p>
+        </div>
+    </div>
+    <footer>
+        <p>// Calculating War Trajectory...</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit11').addEventListener('click', checkAnswer11);
+        document.getElementById('pass11').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkAnswer11();
+            }
+        });
+
+        function checkAnswer11() {
+            // Svarið er Poland
+            const correctAnswer = 'poland';
+            const userAnswer = document.getElementById('pass11').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('error11');
+
+            if (userAnswer === correctAnswer) {
+                // Rétt svar, fara á næstu síðu
+                window.location.href = '12_poland_invasion_info.html';
+            } else {
+                // Rangt svar
+                errorMessage.style.display = 'block';
+                document.getElementById('pass11').value = '';
+                document.getElementById('pass11').focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>
